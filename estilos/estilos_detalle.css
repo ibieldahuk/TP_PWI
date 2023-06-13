@@ -20,6 +20,10 @@
 
  FIN ANDAMIOS */
 
+.material-icons {
+    cursor: pointer;
+}
+
 .detalle {
     display: flex;
     flex-direction: column;
@@ -62,6 +66,10 @@
     list-style-type: none;
     background-color: rgb(158, 223, 228);
     padding: 0;
+}
+
+.contenidos_curso ul ul {
+    display: none;
 }
 
 .contenidos_curso li {

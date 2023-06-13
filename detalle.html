@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="estilos/estilos_comunes.css">
     <link rel="stylesheet" href="estilos/estilos_detalle.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="js/detalle.js"></script>
 </head>
 
 <body>
@@ -59,8 +60,10 @@
                 <ul>
                     <li>
                         <p>Introducción</p>
-                        <span class="material-icons">expand_less</span>
+                        <span class="material-icons" onclick="mostrarOcultar('contenidos_1', 'btn_contenidos_1')" id="btn_contenidos_1">expand_more</span>
                     </li>
+                    <!--li-->
+                        <ul id="contenidos_1">
                             <li>
                                 <span class="material-icons">play_circle_outline</span>
                                 <p>Variables</p>
@@ -97,22 +100,184 @@
                                     <span class="material-icons">radio_button_unchecked</span>
                                 </div>
                             </li>
+                        </ul>
+                    <!--/li-->
                     <li>
                         <p>Unidad 2</p>
-                        <span class="material-icons">expand_more</span>
+                        <span class="material-icons" onclick="mostrarOcultar('contenidos_2', 'btn_contenidos_2')" id="btn_contenidos_2">expand_more</span>
                     </li>
+                    <!--li-->
+                    <ul id="contenidos_2">
+                        <li>
+                            <span class="material-icons">play_circle_outline</span>
+                            <p>Variables</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">check_circle</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">play_circle_outline</span>
+                            <p>Operadores</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">mode_edit</span>
+                            <p>Ejercicios</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">check_box</span>
+                            <p>Evaluación</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>60min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                    </ul>
+                <!--/li-->
                     <li>
                         <p>Unidad 3</p>
-                        <span class="material-icons">expand_more</span>
+                        <span class="material-icons" onclick="mostrarOcultar('contenidos_3', 'btn_contenidos_3')" id="btn_contenidos_3">expand_more</span>
                     </li>
+                    <!--li-->
+                    <ul id="contenidos_3">
+                        <li>
+                            <span class="material-icons">play_circle_outline</span>
+                            <p>Variables</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">check_circle</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">play_circle_outline</span>
+                            <p>Operadores</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">mode_edit</span>
+                            <p>Ejercicios</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">check_box</span>
+                            <p>Evaluación</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>60min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                    </ul>
+                <!--/li-->
                     <li>
                         <p>Unidad 4</p>
-                        <span class="material-icons">expand_more</span>
+                        <span class="material-icons" onclick="mostrarOcultar('contenidos_4', 'btn_contenidos_4')" id="btn_contenidos_4">expand_more</span>
                     </li>
+                    <!--li-->
+                    <ul id="contenidos_4">
+                        <li>
+                            <span class="material-icons">play_circle_outline</span>
+                            <p>Variables</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">check_circle</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">play_circle_outline</span>
+                            <p>Operadores</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">mode_edit</span>
+                            <p>Ejercicios</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">check_box</span>
+                            <p>Evaluación</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>60min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                    </ul>
+                <!--/li-->
                     <li>
                         <p>Unidad 5</p>
-                        <span class="material-icons">expand_more</span>
+                        <span class="material-icons" onclick="mostrarOcultar('contenidos_5', 'btn_contenidos_5')" id="btn_contenidos_5">expand_more</span>
                     </li>
+                    <!--li-->
+                    <ul id="contenidos_5">
+                        <li>
+                            <span class="material-icons">play_circle_outline</span>
+                            <p>Variables</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">check_circle</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">play_circle_outline</span>
+                            <p>Operadores</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">mode_edit</span>
+                            <p>Ejercicios</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">check_box</span>
+                            <p>Evaluación</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>60min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                    </ul>
+                <!--/li-->
                 </ul>
             </article>
         </section>
