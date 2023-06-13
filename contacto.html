@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iCourses</title>
+    <link rel="stylesheet" href="estilos/estilos_comunes.css">
+    <link rel="stylesheet" href="estilos/estilos_contacto.css">
+</head>
+<body>
+    
+    <!--
+        *   *   *****   *****   ****    *****   *****
+        *   *   *       *   *   *   *   *       *   *
+        *****   ***     *****   *   *   ***     *****
+        *   *   *       *   *   *   *   *       * **
+        *   *   *****   *   *   ****    *****   *   *
+    -->
+    
+    <header id="inicio">
+        <section class="menu_superior">
+            <img src="img/logo2.png" alt="Isotipo de la empresa." class="logo">
+            <form action="#" method="get">
+                <input type="text" name="busqueda" id="busqueda" placeholder="Buscar">
+            </form>
+            <img src="img/lupa.png" alt="" class="img_busqueda">
+            <article class="carrito">
+                <span class="numero-carrito">1</span>
+            </article>
+        </section>
+        <section class="menu_inferior">
+            <a href="index.html">Página Principal</a>
+            <a href="detalle.html">Nuestros iCourses</a>
+            <a href="inscripcion.html">Inscripcion</a>
+            <a href="gift_card.html">Creá una Giftcard</a>
+            <a href="contacto.html">Contacto</a>
+        </section>
+    </header>
+
+    <main>
+        <h2>Contacto</h2>
+        <section class="datos">
+            <article class="formulario">
+                <form action="" method="post" enctype="multipart/form-data">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" name="nombre" id="nombre" required>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" id="apellido" required>
+                    <label for="telefono">Número de teléfono</label>
+                    <input type="text" name="telefono" id="telefono">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" name="email" id="email" required>
+                    <label for="comentarios">Comentarios y consultas</label>
+                    <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+                    <input type="submit" class="boton" value="Enviar">
+                </form>
+            </article>
+            <article class="contacto">
+                <p>Si tenés alguna duda o consulta que quieras realizar, podés hacerlo a través de este formulario. O podés ponerte en contacto con nosotros a través de nuestro correo electrónico o número de teléfono.</p>
+                <ul>
+                    <li><strong>Tel.:</strong> 0810-333-3333</li>
+                    <li><strong>E-mail:</strong> info@icourses.com</li>
+                </ul>
+            </article>
+        </section>
+        <h2>Ubicación</h2>
+        <section class="ubicacion">
+            <article>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d176921.4473845098!2d-59.224513583178584!3d-51.88290058995066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1683566591198!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </article>
+        </section>
+        <a href="#inicio" class="inicio"></a>
+    </main>
+
+   <!--
+            *****   *****   *****   *****   *****   *****
+            *       *   *   *   *     *     *       *   *
+            ***     *   *   *   *     *     ***     *****
+            *       *   *   *   *     *     *       * **
+            *       *****   *****     *     *****   *   *
+    -->
+
+    <footer class="footer">
+        <article class="integrantes">
+            <p>Fernandez Guadalupe - 44.141.095</p>
+            <p>Ibi Eldahuk - 42.153.581</p>
+            <p>Duran Juliana - 40.290.932</p>
+        </article>
+        <article class="navegacion">
+            <a href="index.html">Página Principal</a>
+            <a href="detalle.html">Nuestros iCourses</a>
+            <a href="inscripcion.html">Inscripcion</a>
+            <a href="gift_card.html">Creá una Giftcard</a>
+            <a href="contacto.html">Contacto</a>
+        </article>
+        <article class="redes">
+            <a href="https://www.facebook.com/" target="_blank" class="fb">
+                <img src="img/facebook.png" alt="">
+            </a>
+            <a href="https://www.github.com/" target="_blank" class="git">
+                <img src="img/github.png" alt="">
+            </a>
+            <a href="https://www.twitter.com/" target="_blank" class="tw">
+                <img src="img/twitter.png" alt="">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" class="ig">
+                <img src="img/instagram.png" alt="">
+            </a>
+        </article>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iCourses</title>
+    <link rel="stylesheet" href="estilos/estilos_comunes.css">
+    <link rel="stylesheet" href="estilos/estilos_giftcard.css">
+</head>
+<body>
+    
+    <!--
+        *   *   *****   *****   ****    *****   *****
+        *   *   *       *   *   *   *   *       *   *
+        *****   ***     *****   *   *   ***     *****
+        *   *   *       *   *   *   *   *       * **
+        *   *   *****   *   *   ****    *****   *   *
+    -->
+    
+    <header id="inicio">
+        <section class="menu_superior">
+            <img src="img/logo2.png" alt="Isotipo de la empresa." class="logo">
+            <form action="#" method="get">
+                <input type="text" name="busqueda" id="busqueda" placeholder="Buscar">
+            </form>
+            <img src="img/lupa.png" alt="" class="img_busqueda">
+            <article class="carrito">
+                <span class="numero-carrito">1</span>
+            </article>
+        </section>
+        <section class="menu_inferior">
+            <a href="index.html">Página Principal</a>
+            <a href="detalle.html">Nuestros iCourses</a>
+            <a href="inscripcion.html">Inscripcion</a>
+            <a href="gift_card.html">Creá una Giftcard</a>
+            <a href="contacto.html">Contacto</a>
+        </section>
+    </header>
+    
+    <main>
+        <article class="popup d-none">
+            <button class="boton-cancelar">x</button>
+            <h2 id="pregunta-popup">¿A donde deberíamos enviar la GiftCard?</h2>
+            <form action="#" method="get" class="formulario-popup">
+                <label for="mail">Mail:</label>
+                <input type="email" name="mail" id="mail">
+                <button type="submit" class="boton-enviar en_boton">ENVIAR</button>
+            </form>
+            <h2 class="enviado d-none">¡Enviado satisfactoriamente!</h2>
+        </article>
+        <div class="contenedor-flex">
+            <section class="prev">
+                <article class="previsualizacion">
+                    <span class="texto">GIFT CARD para</span>
+                    <h2 id="destinatario">DESTINATARIO</h2>
+                    <span class="precio pos1">$0000.-</span>
+                </article>
+                <p class="piedpag">VISTA PREVIA</p>
+            </section>
+
+            <section class="fromulario">
+                <h3 class="perso-titulo">Personalización de Giftcard</h3>
+                <form action="#" method="get" class="formulario-gift">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre Destinatario" class="nombre-destinatario">
+                    <label for="color" class="color">Color</label>
+                    <article class="color-gnrl">
+                        <div class="centrar-input">
+                            <img src="img/cir-rojo.png" class="rojo">
+                            <input type="radio" name="color" id="rojo" value="rojo">
+                        </div>
+                        <div class="centrar-input">
+                            <img src="img/cir-verde.png" class="verde">
+                            <input type="radio" name="color" id="verde" value="verde">
+                        </div>
+                        <div class="centrar-input">
+                            <img src="img/cir-azul.png" class="azul">
+                            <input type="radio" name="color" id="azul" value="azul">
+                        </div>
+                        <div class="centrar-input">
+                            <img src="img/cir-amarillo.png" class="amarillo">
+                            <input type="radio" name="color" id="amarillo" value="amarillo">
+                        </div>
+                        <div class="centrar-input">
+                            <img src="img/cir-naranja.png" class="naranja">
+                            <input type="radio" name="color" id="naranja" value="naranja">
+                        </div>
+                    </article>
+                    <label for="tam-fuente">Tamaño de Fuente</label>
+                    <article class="tamanio-gnrl">
+                        <div class="centrar-input">
+                            <label for="veintepx" class="veinte">20px</label>
+                        <input type="radio" name="tamanio" id="veintepx" value="veinte">
+                        </div>
+                        <div class="centrar-input">
+                            <label for="veinocho" class="veintiocho">28px</label>
+                            <input type="radio" name="tamanio" id="veinocho" value="veintiocho">
+                        </div>
+                        <div class="centrar-input">
+                            <label for="treidos" class="treintidos">32px</label>
+                            <input type="radio" name="tamanio" id="treidos" value="treintidos">
+                        </div>
+                        <div class="centrar-input">
+                            <label for="cuaocho" class="cuarentiocho">48px</label>
+                            <input type="radio" name="tamanio" id="cuaocho" value="cuarentiocho">
+                        </div>
+                        <div class="centrar-input">
+                            <label for="sesenta" class="sesenta">60px</label>
+                            <input type="radio" name="tamanio" id="sesenta" value="sesenta">
+                        </div>                        
+                    </article>
+ 
+                    <label for="monto">Monto $</label> <input type="number" name="monto" id="monto" class="monto">
+
+                    <label for="ubicacion" class="ubicacion">Ubicación</label>
+                    <article class="ubicacion-gnrl">
+                        <div class="centrar-input">
+                            <img src="img/pos1.png" class="pos">
+                            <input type="radio" name="pos" id="pos1" value="pos1" checked>
+                        </div>
+                        <div class="centrar-input">
+                            <img src="img/pos2.png" class="pos">
+                            <input type="radio" name="pos" id="pos2" value="pos2">
+                        </div>
+                        <div class="centrar-input">
+                            <img src="img/pos3.png" class="pos">
+                            <input type="radio" name="pos" id="pos3" value="pos3">
+                        </div>
+                    </article>
+                    <label for="fondo" class="fondo">Fondo</label>
+                    <article class="fondo-gnrl">
+                        <div class="centrar-input">
+                            <article class="imagen-grad celeste"></article>
+                            <input type="radio" name="imagen-grad" id="celeste" value="celeste">
+                        </div>
+                        <div class="centar-input">
+                            <article class="imagen-grad rosita"></article>
+                            <input type="radio" name="imagen-grad" id="rosita" value="rosita">
+                        </div>
+                        <div class="centrar-input">
+                            <article class="imagen-grad verdoso"></article>
+                            <input type="radio" name="imagen-grad" id="verdoso" value="verdoso">
+                        </div>
+                        <div class="centrar-input">
+                            <article class="imagen-grad violetoso"></article>
+                            <input type="radio" name="imagen-grad" id="violetoso" value="violetoso">
+                        </div>
+                        <div class="centrar-input">
+                            <article class="imagen-grad vino"></article>
+                            <input type="radio" name="imagen-grad" id="vino" value="vino">
+                        </div>
+                    </article>
+                    <button class="en_boton" id="boton-confirmar">CONFIRMAR</button>
+                </form>
+            </section>
+        </div>
+        <a href="#inicio" class="inicio"></a>
+    </main>
+    <!--
+            *****   *****   *****   *****   *****   *****
+            *       *   *   *   *     *     *       *   *
+            ***     *   *   *   *     *     ***     *****
+            *       *   *   *   *     *     *       * **
+            *       *****   *****     *     *****   *   *
+    -->
+
+    <footer class="footer">
+        <article class="integrantes">
+            <p>Fernandez Guadalupe - 44.141.095</p>
+            <p>Ibi Eldahuk - 42.153.581</p>
+            <p>Duran Juliana - 40.290.932</p>
+        </article>
+        <article class="navegacion">
+            <a href="index.html">Página Principal</a>
+            <a href="detalle.html">Nuestros iCourses</a>
+            <a href="inscripcion.html">Inscripcion</a>
+            <a href="gift_card.html">Creá una Giftcard</a>
+            <a href="contacto.html">Contacto</a>
+        </article>
+        <article class="redes">
+            <a href="https://www.facebook.com/" target="_blank" class="fb">
+                <img src="img/facebook.png" alt="">
+            </a>
+            <a href="https://www.github.com/" target="_blank" class="git">
+                <img src="img/github.png" alt="">
+            </a>
+            <a href="https://www.twitter.com/" target="_blank" class="tw">
+                <img src="img/twitter.png" alt="">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" class="ig">
+                <img src="img/instagram.png" alt="">
+            </a>
+        </article>
+    </footer>
+    <script src="js/gift_card.js"></script>
+</body>
+</html>

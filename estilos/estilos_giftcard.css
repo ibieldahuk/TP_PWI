@@ -1,0 +1,282 @@
+/*#207178*/
+.contenedor-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.prev, .formulario{
+    width: 50%;
+}
+.formulario{
+    margin-top: 20px;
+}
+.previsualizacion{
+    width: 300px;
+    height: 300px;
+    background-color: lightgray;
+    position: relative;
+}
+.formulario-gift label{
+    font-weight: 500;
+}
+.perso-titulo{
+    display: inline;
+    padding: 20px 20px 20px 0px;
+    align-content: center;
+}
+.texto{
+    position: absolute;
+    left: 50%;
+    top: 38%;
+    transform: translate(-50%, -50%);
+}
+.precio{
+    background-color: #207178;
+    color: #fff;
+    padding: 5px;
+}
+.pos1{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.pos2{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.pos3{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.previsualizacion h2{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.formulario-gift{
+    width: 100%;
+    height: 60%;
+}
+.nombre-destinatario{
+    width: 100%;
+    height: 25px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border-color: lightgray;
+    margin: 30px 0px 10px 0px;
+}
+.color-gnrl{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 5px 0px 20px 0px;
+}
+.color-gnrl img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+} 
+.rojo{
+    color: red;
+}
+.verde{
+    color: green;
+}
+.azul{
+    color: blue;
+}
+.amarillo{
+    color: yellow;
+}
+.naranja{
+    color: orange;
+}
+.color-gnrl label{
+    display: flex;
+    flex-direction:row;
+}
+.color-gnrl input{
+    display: flex;
+    align-self: flex-end;
+    justify-content: space-around;
+    margin: auto;
+}
+.pos{
+    width: 35px;
+    height: 30px;
+}
+.piedpag{
+    position: absolute;
+    left: 22%;
+    transform: translate(-50%, -50%);
+}
+.veinte{
+    font-size: 13px;
+}
+.veintiocho{
+    font-size: 14px;
+}
+.treintidos{
+    font-size: 15px;
+}
+.cuarentiocho{
+    font-size: 16px;
+}
+.sesenta{
+    font-size: 17px;
+}
+.tamanio-gnrl{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 5px 0px 20px 0px;
+}
+.tamanio-gnrl label{
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 20px;
+}
+.tamanio-gnrl input{
+    display: flex;
+    align-self: flex-end;
+    justify-content: space-around;
+    margin: auto;
+}
+.centrar-input input{
+    text-align: center;
+}
+.monto{
+    width: 75.5%;
+    height: 20px;
+    box-sizing:content-box;
+    border-radius: 5px;
+    border-color: lightgray;
+    margin-bottom: 20px;
+}
+.ubicacion-gnrl{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 5px 0px 20px 0px;
+}
+.ubicacion-gnrl label{
+    display: flex;
+    flex-direction:row;
+}
+.ubicacion-gnrl input{
+    display: flex;
+    align-self: flex-end;
+    justify-content: space-around;
+    margin: auto;
+}
+.imagen-grad{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+.celeste{
+    background-image: url(../img/grad-celeste.png);
+}
+.rosita{
+    background-image: url(../img/grad-rosita.png);
+}
+.verdoso{
+    background-image: url(../img/grad-verdoso.png);
+}
+.violetoso{
+    background-image: url(../img/grad-violetoso.png);
+}
+.vino{
+    background-image: url(../img/grad-vino.png);
+}
+.fondo-gnrl{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 5px 0px 20px 0px;
+}
+.fondo-gnrl label{
+    display: flex;
+    flex-direction:row;
+}
+.fondo-gnrl input{
+    display: flex;
+    align-self: flex-end;
+    justify-content: space-around;
+    margin: auto;
+}
+.en_boton{
+    background-color: #207178;
+    color: #fff;
+    border-radius: 5px;
+    border-style: none;
+    padding: 8px;
+    cursor: pointer;
+}
+.en_boton:hover{
+    background-color: #88c6cc;
+    color: black;
+    transition: 0.6s;
+}
+.d-none{
+    display: none;
+}
+.popup{
+    background-color: #ad9898;
+    border-radius: 2%;
+    box-sizing: border-box;
+    padding: 30px;
+    width: 80%;
+    height: 30%;
+    position: fixed;
+    z-index:2;
+}
+.popup h2{
+    text-align: center;
+}
+.formulario-popup{
+    display: flex;
+    justify-content: center;
+}
+.boton-enviar{
+    margin-left: 30px;
+}
+.popup input{
+    border-style: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    box-sizing: border-box;
+}
+.popup label{
+    align-self: center;
+}
+.boton-cancelar{
+    display: flex;
+    justify-content: end;
+    border-style: none;
+    border-radius: 50%;
+    position: absolute;
+    right: 4%;
+    top: 9%;
+    color: #fff;
+    font-weight: 900;
+    background-color: transparent;
+    cursor: pointer;
+}
+.boton-cancelar:hover{
+    color: black;
+}
+.enviado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+

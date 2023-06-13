@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.carrito{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/carrito2.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
+}
+
+.footer {
+    background-color: #353535;
+    margin-top: 2em;
+}
+
+.footer article {
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.inicio{
+    width: 50px;
+    height: 50px;
+    display: block;
+    background-color: #207178;
+    border-radius: 50%;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+    background-image: url(../img/arriba.png);
+    background-size: cover;
+    position: fixed;
+    z-index: 100;
+    bottom: 5px;
+    right: 5px;
+    transition: 0.5s;
+}
+
+.logo{
+    width: 60px;
+    height: 60px;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.menu_inferior a{
+    display: block;
+    margin: 0.5em;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+.menu_inferior a:hover {
+    text-decoration: underline;
+    background-color: #20717841;
+}
+
+.menu_superior {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu_superior * {
+    margin: 0.5em 0;
+}
+
+.menu_superior form {
+    display: none;
+}
+
+.menu_superior input{
+    background-image: url(../img/lupa.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    box-sizing: border-box;
+    padding-right: 10px;
+    border-radius: 3px;
+}
+
+.menu_superior .img_busqueda {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.navegacion a:hover {
+    text-decoration: underline;
+}
+
+.navegacion, .integrantes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navegacion a, .integrantes p{
+    color: #fff;
+    text-decoration: none;
+}
+
+.numero-carrito{
+    position: absolute;
+    background-color: #207178;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 800;
+    text-align: center;
+    color: #fff;
+    left: 65%;
+}
+
+.redes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.redes a:hover {
+    cursor: pointer;
+}
+
+.redes img {
+    max-width: 3em;
+    height: auto;
+}
+
+@media screen and (min-width:47em) {
+
+    .menu_inferior {
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu_superior .img_busqueda {
+        display: none;
+    }
+
+    .menu_superior form {
+        display: inline;
+    }
+
+    .footer {    
+        display: flex;
+        justify-content: center;
+    }
+
+}

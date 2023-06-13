@@ -1,0 +1,66 @@
+.titulo{
+    margin: 50px 30px;
+}
+
+.linea-inscripcion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0.5em;
+}
+.linea-inscripcion input{
+    height: 18px;
+    border-radius: 5px;
+    border-style:solid;
+}
+
+.linea-inscripcion * {
+    width: 100%;
+    margin: 0.05em;
+}
+
+.linea-inscripcion img{
+    width: 25px;
+    height: 25px;
+}
+.agregar-persona{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.agregar-persona img{
+    width: 25px;
+    height: 25px;
+    margin: 0px 10px 0px 10px;
+}
+.monto-boton{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 30px 10px;
+}
+.monto-boton span{
+    background-color: #353535;
+    color: #fff;
+    padding: 3px;
+    margin: 0px 10px;
+}
+.monto-boton button{
+    background-color: #207178;
+    color: #fff;
+    border-radius: 9px;
+    border-style: none;
+    padding: 8px;
+}
+.monto-boton button:hover{
+    background-color: #88c6cc;
+    color: black;
+    transition: 0.6s;
+}
+
+@media screen and (min-width: 47em) {
+    .linea-inscripcion {
+        flex-wrap: nowrap;
+    }
+}

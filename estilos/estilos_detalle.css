@@ -1,0 +1,289 @@
+/* ANDAMIOS 
+
+#foto_andamio, #contenidos_andamio, #foto_docente_andamio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellowgreen;
+    color: teal;
+}
+
+#foto_andamio {
+    width: 300px;
+    height: 300px;
+}
+
+#contenidos_andamio {
+    width: 400px;
+    height: 300px;
+}
+
+ FIN ANDAMIOS */
+
+.detalle {
+    display: flex;
+    flex-direction: column;
+}
+
+.detalle > article {
+    margin: 0.5em 0.25em;
+}
+
+.foto_curso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.datos_curso * {
+    margin: 0.5em 0;
+}
+
+.datos_curso p {
+    text-align: justify;
+}
+
+.contenidos_curso {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenidos_curso * {
+    margin: 0;
+}
+
+.contenidos_curso h2 {
+    background-color: #207178;
+    color: white;
+    padding: 2px;
+}
+
+.contenidos_curso ul {
+    list-style-type: none;
+    background-color: rgb(158, 223, 228);
+    padding: 0;
+}
+
+.contenidos_curso li {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+    border-width: 1px;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+}
+
+.contenidos_curso div {
+    display: flex;
+}
+
+.info_docente h2 {
+    margin-left: 0.25em;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    background-color: #207178;
+    color: white;
+}
+
+.info * {
+    margin: 0.5em;
+}
+
+.info div * {
+    margin: 0.5em 0;
+}
+
+.info img {
+    border-radius: 50%;
+    align-self: center;
+}
+
+.otros_cursos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.full_star, .empty_star {
+    display: inline;
+    margin: 0px;
+}
+
+.full_star * {
+    color: goldenrod;
+    margin: 0px;
+}
+
+.empty_star * {
+    color: lightgoldenrodyellow;
+    margin: 0px;
+}
+
+.inscripcion{
+    background-color: #237178;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+@media screen and (min-width: 47em) {
+    .detalle {
+        flex-direction: row;
+    }
+
+    .foto_curso {
+        width: 30%;
+    }
+
+    .datos_curso {
+        width: 30%;
+    }
+
+    .contenidos_curso {
+        width: 40%;
+    }
+
+    .info {
+        flex-direction: row;
+    }
+}
+
+/*aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+
+.curso-1{
+    position: relative;
+    background-image: url(../img/curso_destacado1.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center top;
+    width: 200px;
+    height: 199px;
+    margin: 30px;
+}
+.precio-1{
+    position: absolute;
+    background-color: #353535;
+    color: #fff;
+    right: 0;
+    top: 0;
+}
+.tiempo-1{
+    position: absolute;
+    top: 45%;
+    font-size: 20px;
+}
+.nombre-1{
+    position: absolute;
+    top: 45%;
+    right: 0;
+    font-size: 20px;
+}
+.detalles-1{
+    position: absolute;
+    font-size: 11px;
+    bottom: 0;
+    right: 32%;
+}
+.compra-1{
+    position: absolute;
+    top: 75%;
+    right: 30%;
+    background-color: #237178;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+}
+.curso-2{
+    position: relative;
+    background-image: url(../img/curso_destacado2.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center top;
+    width: 200px;
+    height: 199px;
+    margin: 30px;
+}
+.precio-2{
+    position: absolute;
+    background-color: #353535;
+    color: #fff;
+    right: 0;
+    top: 0;
+}
+.tiempo-2{
+    position: absolute;
+    top: 45%;
+    font-size: 20px;
+}
+.nombre-2{
+    position: absolute;
+    top: 45%;
+    right: 0;
+    font-size: 20px;
+}
+.detalles-2{
+    position: absolute;
+    font-size: 11px;
+    bottom: 0;
+    right: 32%;
+}
+.compra-2{
+    position: absolute;
+    top: 75%;
+    right: 30%;
+    background-color: #237178;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+}
+.curso-3{
+    position: relative;
+    background-image: url(../img/curso_destacado3.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center top;
+    width: 200px;
+    height: 199px;
+    margin: 30px;
+}
+.precio-3{
+    position: absolute;
+    background-color: #353535;
+    color: #fff;
+    right: 0;
+    top: 0;
+}
+.tiempo-3{
+    position: absolute;
+    top: 45%;
+    font-size: 20px;
+}
+.nombre-3{
+    position: absolute;
+    top: 45%;
+    right: 0;
+    font-size: 20px;
+}
+.detalles-3{
+    position: absolute;
+    font-size: 11px;
+    bottom: 0;
+    right: 32%;
+}
+.compra-3{
+    position: absolute;
+    top: 75%;
+    right: 30%;
+    background-color: #237178;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+}

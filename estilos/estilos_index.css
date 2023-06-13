@@ -1,0 +1,150 @@
+.slider {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider img {
+    max-width: 100%;
+    height: auto;
+}
+
+.pasos .paso {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 1em auto;
+    border-style: solid;
+}
+
+.pasos .paso h4 {
+    margin: 0.5em;
+    text-align: right;
+}
+
+.pasos .paso a, p {
+    margin: 0;
+    text-align: right;
+    color: black;
+}
+
+.pasos .titulo {
+    text-align: center;
+}
+
+@media screen and (min-width:47em) {
+    .pasos {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .pasos .titulo {
+        width: 100%;
+    }
+}
+
+.titulo{
+    margin-top: 2em;
+}
+
+.cursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cursos .titulo {
+    width: 100%;
+    text-align: center;
+}
+
+.medios_de_pago {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.medios_de_pago .titulo {
+    width: 100%;
+    text-align: center;
+    margin-top: 104px;
+
+}
+.medios_de_pago img{
+    width: 150px;
+    height: 100px;
+}
+
+.curso{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center top;
+    width: 200px;
+    height: 199px;
+    margin: 30px;
+}
+
+.precio{
+    position: absolute;
+    background-color: #353535;
+    color: #fff;
+    right: 0;
+    top: 0;
+}
+
+.tiempo{
+    position: absolute;
+    top: 45%;
+    font-size: 20px;
+}
+
+.nombre{
+    position: absolute;
+    top: 45%;
+    right: 0;
+    font-size: 20px;
+}
+
+.detalles{
+    position: absolute;
+    font-size: 11px;
+    bottom: 0;
+    right: 32%;
+}
+
+.compra{
+    position: absolute;
+    top: 75%;
+    right: 30%;
+    background-color: #237178;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.curso-1 {
+    background-image: url(../img/curso_destacado1.jpg);
+}
+
+.curso-2{
+    background-image: url(../img/curso_destacado2.jpg);
+}
+
+.curso-3{
+    background-image: url(../img/curso_destacado3.jpg);
+}
+.curso-4{
+    background-image: url(../img/curso_destacado4.jpg);
+}
+.curso-5{
+    background-image: url(../img/curso_destacado5.jpg);
+}
+.curso-6{
+    background-image: url(../img/curso_destacado6.jpg);
+}
+.cursos a{
+    text-decoration: none;
+}
