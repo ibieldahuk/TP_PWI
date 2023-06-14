@@ -1,5 +1,5 @@
 .titulo{
-    margin: 50px 30px;
+    margin:  3.125em 0.625em;
 }
 
 .linea-inscripcion{
@@ -7,7 +7,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    margin: 0.5em;
+    margin: 0.5em 0em 0.5em 0.5em;
 }
 .linea-inscripcion input{
     height: 18px;
@@ -19,20 +19,26 @@
     width: 100%;
     margin: 0.05em;
 }
-
-.linea-inscripcion img{
-    width: 25px;
-    height: 25px;
+#suprimir, #agregar{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #207178;
+    background-color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    border-color: #207178;
+    border-style: solid;
+    cursor: pointer;
 }
 .agregar-persona{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin-left: 0.625em;
 }
-.agregar-persona img{
-    width: 25px;
-    height: 25px;
-    margin: 0px 10px 0px 10px;
+.agregar-persona p{
+    margin-left: 0.625em;
 }
 .monto-boton{
     display: flex;
@@ -57,6 +63,25 @@
     background-color: #88c6cc;
     color: black;
     transition: 0.6s;
+}
+.titulo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.opciones{
+    width: 9em;
+    height: 2.6879999999999997em;
+    border-color: #207178;
+    border-style: solid;
+    color: #207178;
+    background-color: #fff;
+    border-radius: 0.313em;
+}
+
+.clicked{
+    background-color: #207178;
+    color: #fff;
 }
 
 @media screen and (min-width: 47em) {
