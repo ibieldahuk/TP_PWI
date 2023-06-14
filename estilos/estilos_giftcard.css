@@ -3,7 +3,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column-reverse;
     margin-top: 60px;
     margin-bottom: 60px;
 }
