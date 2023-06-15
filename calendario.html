@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iCourses</title>
+    <link rel="stylesheet" href="estilos/calendario.css">
     <link rel="stylesheet" href="estilos/estilos_comunes.css">
-    <link rel="stylesheet" href="estilos/estilos_inscripcion.css">
+
 </head>
 <body>
-    
+        
     <!--
         *   *   *****   *****   ****    *****   *****
         *   *   *       *   *   *   *   *       *   *
@@ -38,40 +38,8 @@
             <a href="contacto.html">Contacto</a>
         </nav>
     </header>
-
     <main>
-        <section class="principal">
-            <article class="titulo">
-                <button class="opciones" id="php" onclick="toggleClase(this)">PHP</button>
-                <button class="opciones" id="html" onclick="toggleClase(this)">HTML</button>
-                <button class="opciones" id="css" onclick="toggleClase(this)">CSS</button>
-                <button class="opciones" id="java" onclick="toggleClase(this)">Java</button>
-                <button class="opciones" id="javas" onclick="toggleClase(this)">Javascript</button>
-                <button class="opciones" id="mysql" onclick="toggleClase(this)">MySQL</button>
-            </article>
-            <article>
-                <h3>Inscripción</h3>
-                <form action="#" method="get" class="formulario-inscripcion">
-                    <div class="linea-inscripcion">
-                        <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-                        <input type="text" name="apellido" id="apellido" placeholder="Apellido">
-                        <input type="text" name="dni" id="dni" placeholder="Documento">
-                        <input type="email" name="email" id="email" placeholder="Email">
-                        <input type="tel" name="telefono" id="telefono" placeholder="Celular">
-                        <button type="submit" id="suprimir">-</button>
-                    </div>
-                </form>
-            </article>
-            <article class="agregar-persona">
-                <button type="submit" id="agregar">+</button>
-                <p>Agregar Persona</p>
-            </article>
-        </section>
-        <section class="monto-boton">
-            <span id="monto">$000.-</span>
-            <button id="inscribirse">INCRIBIRSE</button>
-        </section>
-        <a href="#inicio" class="inicio"></a>
+        <div id="calendar"></div>
     </main>
     <!--
             *****   *****   *****   *****   *****   *****
@@ -110,6 +78,7 @@
             </a>
         </article>
     </footer>
-    <script src="js/inscripcion.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+    <script src="js/calendario.js"></script>
 </body>
 </html>
