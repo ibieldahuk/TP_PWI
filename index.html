@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iCourses</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="estilos/estilos_comunes.css">
     <link rel="stylesheet" href="estilos/estilos_index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -42,7 +43,13 @@
 
     <main>
         <section class="slider">
-            <img src="img/index_banner_temp.jpg" alt="">
+            <article>
+                <img src="img/index_banner_temp.jpg" alt="">
+            </article>
+            <article>
+                <img src="img/index-banner.jpg" alt="">
+            </article>
+            <article></article>
         </section>
 
         <!--
@@ -86,7 +93,7 @@
                 <h2>iCourses destacados</h2>
             </article>
             <article class="curso curso-1">
-                <span class="precio">$9999,99</span>
+                <span class="precio">$80.000,0</span>
                 <div>
                     <h4 class="tiempo">60hs</h4>
                     <h4 class="nombre">HTML</h4>
@@ -95,7 +102,7 @@
                 <a href="detalle.html" class="detalles">Ver detalle</a>
             </article>
             <article class="curso curso-2">
-                <span class="precio">$9999,99</span>
+                <span class="precio">$70.000,0</span>
                 <div>
                     <h4 class="tiempo">60hs</h4>
                     <h4 class="nombre">CSS</h4>
@@ -104,7 +111,7 @@
                 <a href="inscripcion.html" class="compra">Comprar</a>
             </article>
             <article class="curso curso-3">
-                <span class="precio">$9999,99</span>
+                <span class="precio">$100.000,0</span>
                 <div>
                     <h4 class="tiempo">60hs</h4>
                     <h4 class="nombre">JavaScript</h4>
@@ -113,7 +120,7 @@
                 <a href="inscripcion.html" class="compra">Comprar</a>
             </article>
             <article class="curso curso-4">
-                <span class="precio">$9999,99</span>
+                <span class="precio">$90.000,0</span>
                 <div>
                     <h4 class="tiempo">60hs</h4>
                     <h4 class="nombre">PHP</h4>
@@ -122,7 +129,7 @@
                 <a href="inscripcion.html" class="compra">Comprar</a>
             </article>
             <article class="curso curso-5">
-                <span class="precio">$9999,99</span>
+                <span class="precio">$50.000,0</span>
                 <div>
                     <h4 class="tiempo">60hs</h4>
                     <h4 class="nombre">MySQL</h4>
@@ -131,7 +138,7 @@
                 <a href="inscripcion.html" class="compra">Comprar</a>
             </article>
             <article class="curso curso-6">
-                <span class="precio">$9999,99</span>
+                <span class="precio">$150.000,0</span>
                 <div>
                     <h4 class="tiempo">60hs</h4>
                     <h4 class="nombre">Java</h4>
@@ -212,6 +219,48 @@
             </a>
         </article>
     </footer>
-
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+       $(document).ready(function(){
+        $('.slider').slick({
+            dots: false,
+            infinite: true,
+            speed: 700,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            responsive: [
+                {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+                },
+                {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+            });
+       });
+    </script>
 </body>
 </html>
