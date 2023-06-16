@@ -45,10 +45,10 @@
             <h2 id="pregunta-popup">¿A donde deberíamos enviar la GiftCard?</h2>
             <form action="#" method="get" class="formulario-popup">
                 <label for="mail">Mail:</label>
-                <input type="email" name="mail" id="mail">
+                <input type="email" name="email" id="email" required>
                 <button type="submit" class="boton-enviar en_boton">ENVIAR</button>
             </form>
-            <h2 class="enviado d-none">¡Enviado satisfactoriamente!</h2>
+            <div class="error" id="mensaje"></div>
         </article>
         <div class="contenedor-flex">
             <section class="prev">
@@ -63,7 +63,7 @@
             <section class="fromulario">
                 <h3 class="perso-titulo">Personalización de Giftcard</h3>
                 <form action="#" method="get" class="formulario-gift">
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre Destinatario" class="nombre-destinatario">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre Destinatario" class="nombre-destinatario" required> 
                     <label for="color" class="color">Color</label>
                     <article class="color-gnrl">
                         <div class="centrar-input">
@@ -110,8 +110,9 @@
                             <input type="radio" name="tamanio" id="sesenta" value="sesenta">
                         </div>                        
                     </article>
- 
-                    <label for="monto">Monto $</label> <input type="number" name="monto" id="monto" class="monto">
+                    <div class="contenedor-monto">
+                        <label for="monto">Monto $</label> <input type="number" name="monto" id="monto" class="monto" required>
+                    </div>
 
                     <label for="ubicacion" class="ubicacion">Ubicación</label>
                     <article class="ubicacion-gnrl">
@@ -151,7 +152,7 @@
                             <input type="radio" name="imagen-grad" id="vino" value="vino">
                         </div>
                     </article>
-                    <button class="en_boton" id="boton-confirmar">CONFIRMAR</button>
+                    <button type="submit" class="en_boton" id="boton-confirmar">CONFIRMAR</button>
                 </form>
             </section>
         </div>
