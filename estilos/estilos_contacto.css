@@ -17,6 +17,8 @@ h2 {
 
 .formulario {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .formulario form {
@@ -32,8 +34,18 @@ h2 {
     width: 25%;
     font-size: 12px;
     padding: 5px;
+    margin-top: 0.938em;
+    cursor: pointer;
 }
-
+.boton:hover{
+    background-color: #88c6cc;
+    color: black;
+    transition: 0.6s;
+}
+.error{
+    color: red;
+    margin-top: 0.625em;
+}
 .contacto li{
     list-style-type: none;
 }
@@ -50,5 +62,8 @@ h2 {
 @media screen and (min-width: 47em) {
     .datos {
         flex-direction: row;
+    }
+    .ubicacion iframe{
+        max-width: 100%;
     }
 }
