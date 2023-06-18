@@ -9,7 +9,22 @@
     max-width: 100%;
     height: auto;
 }
-
+.slick-arrow{
+    width: 1.875em;
+    height: 1.875em;
+    color: transparent;
+    border-style: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    cursor: pointer;
+}
+.slick-prev{
+    background-image: url(../img/angle-left-solid.svg);
+}
+.slick-next{
+    background-image: url(../img/angle-right-solid.svg);
+}
 .pasos .paso {
     display: flex;
     flex-direction: column;
