@@ -51,20 +51,19 @@
             </article>
             <article>
                 <h3>Inscripción</h3>
-                <form action="#" method="get" class="formulario-inscripcion">
-                    <div class="linea-inscripcion">
+                <form action="#" method="get" class="formulario_inscripcion" id="formulario_inscripcion">
+                    <div class="linea_inscripcion" id="linea_inscripcion_1">
                         <input type="text" name="nombre" id="nombre" placeholder="Nombre">
                         <input type="text" name="apellido" id="apellido" placeholder="Apellido">
-                        <input type="text" name="dni" id="dni" placeholder="Documento">
-                        <input type="email" name="email" id="email" placeholder="Email">
-                        <input type="tel" name="telefono" id="telefono" placeholder="Celular">
-                        <button type="submit" id="suprimir">-</button>
+                        <input type="text" name="dni" id="dni" placeholder="DNI">
+                        <input type="email" name="email" id="email" placeholder="E-Mail">
+                        <input type="tel" name="telefono" id="telefono" placeholder="Teléfono">
+                        <input type="button" class="eliminar_persona" value="-" onClick="borrarDatos()">
                     </div>
                 </form>
             </article>
-            <article class="agregar-persona">
-                <button type="submit" id="agregar">+</button>
-                <p>Agregar Persona</p>
+            <article class="agregar_persona">
+                <input type="button" value="+" id="agregar_persona">
             </article>
         </section>
         <section class="monto-boton">
@@ -73,6 +72,7 @@
         </section>
         <a href="#inicio" class="inicio"></a>
     </main>
+
     <!--
             *****   *****   *****   *****   *****   *****
             *       *   *   *   *     *     *       *   *
@@ -110,6 +110,7 @@
             </a>
         </article>
     </footer>
-    <script src="js/inscripcion.js"></script>
+    <!-- <script src="js/inscripcion.js"></script> -->
+    <script src="js/inscripcion2.js"></script>
 </body>
 </html>
