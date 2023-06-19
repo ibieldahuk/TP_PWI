@@ -59,11 +59,14 @@ posicion.forEach((item) => {
   });
 //fin de la creacion de la giftcard
 
+
+//boton confirmacion de gc
 confirmar.addEventListener("click", (e)=>{
     e.preventDefault();
     popup.classList.remove("d-none");
 });
 
+//botones para cerrar y enviar el popup
 cerrar.addEventListener("click", (e)=>{
     e.preventDefault();
     popup.classList.add("d-none");
@@ -71,5 +74,26 @@ cerrar.addEventListener("click", (e)=>{
 
 enviar.addEventListener("click", (e)=>{
     e.preventDefault();
-    enviado.classList.remove("d-none");
+    validar();
 });
+
+
+//validacion de mail
+function validar(){
+    let regexEmail = /^[0-9a-zA-Z._.-]+\@[0-9a-zA-Z._.-]+\.[0-9a-zA-Z]+$/;
+    let mail = document.querySelector("#email").value;
+    let error = false;
+    let mensaje = "";
+
+
+    if(!regexEmail.test(mail)){
+        error = true;
+        mensaje += "<p>Ingrese un mail válido</p>";
+    }
+
+    if(error){
+        document.getElementById("mensaje").innerHTML = mensaje;
+    }else {
+        formPop.submit();
+    }
+};
