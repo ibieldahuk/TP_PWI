@@ -52,6 +52,14 @@ function eliminarLinea(id) {
     document.querySelector('#linea_inscripcion_' + id).remove();
 }
 
+function borrarDatos() {
+    document.querySelector('#linea_inscripcion_1').childNodes.forEach((item) => {
+        if (item.type == 'text' || item.type == 'email' || item.type == 'tel') {
+            item.value = '';
+        }
+    });
+}
+
 function definirCursoSeleccionado() {
     let curso = ''
     document.getElementsByName('selec_curso').forEach((item) => {
