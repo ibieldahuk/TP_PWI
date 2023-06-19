@@ -41,17 +41,31 @@
 
     <main>
         <section class="principal">
-            <article class="titulo">
+            <!-- <article class="titulo">
                 <button class="opciones" id="php" onclick="toggleClase(this)">PHP</button>
                 <button class="opciones" id="html" onclick="toggleClase(this)">HTML</button>
                 <button class="opciones" id="css" onclick="toggleClase(this)">CSS</button>
                 <button class="opciones" id="java" onclick="toggleClase(this)">Java</button>
                 <button class="opciones" id="javas" onclick="toggleClase(this)">Javascript</button>
                 <button class="opciones" id="mysql" onclick="toggleClase(this)">MySQL</button>
-            </article>
+            </article> -->
             <article>
                 <h3>Inscripción</h3>
                 <form action="#" method="get" class="formulario_inscripcion" id="formulario_inscripcion">
+                    <div class="selector_curso">
+                        <input type="radio" name="selec_curso" value="html">
+                        <label for="html">HTML</label>
+                        <input type="radio" name="selec_curso" value="css">
+                        <label for="css">CSS</label>
+                        <input type="radio" name="selec_curso" value="js">
+                        <label for="js">Javascript</label>
+                        <input type="radio" name="selec_curso" value="php">
+                        <label for="php">PHP</label>
+                        <input type="radio" name="selec_curso" value="mysql">
+                        <label for="mysql">MySQL</label>
+                        <input type="radio" name="selec_curso" value="java">
+                        <label for="java">Java</label>
+                    </div>
                     <div class="linea_inscripcion" id="linea_inscripcion_1">
                         <input type="text" name="nombre" id="nombre" placeholder="Nombre">
                         <input type="text" name="apellido" id="apellido" placeholder="Apellido">

@@ -42,6 +42,56 @@ document.querySelector('#agregar_persona').addEventListener("click", function ()
     document.querySelector('#formulario_inscripcion').appendChild(nodoDiv);
 });
 
+document.getElementsByName('selec_curso').forEach((item) => {
+    item.addEventListener('change', function () {
+        calcularMonto();
+    })
+});
+
 function eliminarLinea(id) {
     document.querySelector('#linea_inscripcion_' + id).remove();
+}
+
+function definirCursoSeleccionado() {
+    let curso = ''
+    document.getElementsByName('selec_curso').forEach((item) => {
+        if (item.checked) {
+            curso = item.value;
+        }
+    });
+    return curso;
+}
+
+function definirSubtotal(curso) {
+    let subtotal = 0;
+    switch (curso) {
+        case 'html':
+            subtotal = 50000;
+            break;
+        case 'css':
+            subtotal = 25000;
+            break;
+        case 'js':
+            subtotal = 90000;
+            break;
+        case 'php':
+            subtotal = 10000;
+            break;
+        case 'mysql':
+            subtotal = 60000;
+            break;
+        case 'java':
+            subtotal = 120000;
+            break;
+    }
+    return subtotal;
+}
+
+function calcularMonto() {
+    let curso = definirCursoSeleccionado();
+    let subtotal = definirSubtotal(curso);
+    console.log(curso + ': $' + subtotal);
+    let cantidadInscriptos = document.querySelectorAll('.linea_inscripcion').length;
+    let total = subtotal * cantidadInscriptos;
+    document.querySelector('#monto').innerHTML = '$' + total + '.-';
 }
