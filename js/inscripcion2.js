@@ -1,6 +1,6 @@
 let contadorID = 1;
 
-document.querySelector('#agregar_persona').addEventListener("click", function () {
+document.querySelector('#agregar_persona').addEventListener('click', function () {
     contadorID++;
     //DIV
     let nodoDiv = document.createElement('div');
@@ -41,6 +41,8 @@ document.querySelector('#agregar_persona').addEventListener("click", function ()
     nodoDiv.appendChild(nodoInBtn);
     document.querySelector('#formulario_inscripcion').appendChild(nodoDiv);
 });
+
+document.querySelector('#agregar_persona').addEventListener('click', calcularMonto);
 
 document.getElementsByName('selec_curso').forEach((item) => {
     item.addEventListener('change', function () {
@@ -98,7 +100,6 @@ function definirSubtotal(curso) {
 function calcularMonto() {
     let curso = definirCursoSeleccionado();
     let subtotal = definirSubtotal(curso);
-    console.log(curso + ': $' + subtotal);
     let cantidadInscriptos = document.querySelectorAll('.linea_inscripcion').length;
     let total = subtotal * cantidadInscriptos;
     document.querySelector('#monto').innerHTML = '$' + total + '.-';
