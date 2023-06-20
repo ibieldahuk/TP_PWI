@@ -52,6 +52,7 @@ document.getElementsByName('selec_curso').forEach((item) => {
 
 function eliminarLinea(id) {
     document.querySelector('#linea_inscripcion_' + id).remove();
+    calcularMonto();
 }
 
 function borrarDatos() {
