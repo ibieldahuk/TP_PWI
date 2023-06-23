@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
       locale: 'es',
       weekends: false,
       headerToolbar: {
-        left: 'prev,next today',
+        left: 'dayGridMonth',
         center: 'title',
-        right: 'dayGridMonth,timeGridWeek,listWeek'
+        right: 'today prev,next'
       },
       events: [
         {
@@ -50,6 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       ]
     });
-
     calendar.render();
   });
+  

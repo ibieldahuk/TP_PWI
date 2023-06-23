@@ -1,0 +1,44 @@
+#calendar {
+    max-width: 100%;
+    margin: 40px auto;
+}
+
+:root{
+    --fc-button-bg-color: #207178;
+    --fc-button-border-color: #207178;
+    --fc-button-active-bg-color: #114347;
+    --fc-button-hover-bg-color: #114347;
+    --fc-button-hover-border-color: #114347; 
+    --fc-button-active-border-color: #114347;
+    --fc-today-bg-color: rgba(136, 198, 204, 0.301);
+}
+.fc-toolbar-title{
+    text-transform: uppercase;
+    text-align: center;
+}
+.fc-toolbar-chunk{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.fc-today-button{
+    max-width: fit-content;
+}
+.fc-scrollgrid{
+    max-width: 90%;
+}
+.fc-dayGridMonth-view{
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 48em){
+    .fc-toolbar-chunk{
+        display: flex;
+        flex-direction: row;
+    }
+    .fc-scrollgrid{
+        max-width: 100%;
+    }
+}
