@@ -3,6 +3,7 @@
 body {
     margin: 0;
     font-family: 'Source Code Pro', monospace;
+    background-color: #9258f5;
 }
 .d-none{
     display: none;
@@ -44,6 +45,10 @@ body {
     transition: 0.5s;
 }
 
+#inicio {
+    background-color: #207178;
+}
+
 .logo{
     width: 60px;
     height: 60px;
@@ -52,19 +57,22 @@ body {
 main {
     max-width: 1000px;
     margin: auto;
+    background-color: #207178;
 }
 
 .menu_inferior a{
     display: block;
     margin: 0.5em;
-    color: black;
-    text-decoration: none;
     text-align: center;
+    text-decoration: underline;
+    color: #fa5a4e;
+    background-color: #207178;
 }
 
 .menu_inferior a:hover {
-    text-decoration: underline;
-    background-color: #20717841;
+    color: #fff;
+    text-decoration: none;
+    /* text-shadow: 1px 1px 4px #fff; */
 }
 
 .menu_superior {

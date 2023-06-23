@@ -1,3 +1,7 @@
+body {
+    color: #000;
+}
+
 .slider {
     margin-top: 1em;
     display: flex;
@@ -41,7 +45,13 @@
 .pasos .paso a, p {
     margin: 0;
     text-align: right;
-    color: black;
+    color: #fa5a4e;
+    background-color: #207178;
+}
+
+.pasos .paso a:hover {
+    text-decoration: none;
+    color: #000;
 }
 
 .pasos .titulo {
@@ -100,6 +110,7 @@
     width: 200px;
     height: 199px;
     margin: 30px;
+    background-color: #207178;
 }
 
 .precio{
