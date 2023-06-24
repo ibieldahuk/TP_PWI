@@ -3,11 +3,8 @@
 body {
     margin: 0;
     font-family: 'Source Code Pro', monospace;
-    background-color: #9258f5;
 }
-.d-none{
-    display: none;
-}
+
 .carrito{
     position: relative;
     width: 40px;
@@ -57,22 +54,20 @@ body {
 main {
     max-width: 1000px;
     margin: auto;
-    background-color: #207178;
 }
 
 .menu_inferior a{
     display: block;
     margin: 0.5em;
     text-align: center;
-    text-decoration: underline;
-    color: #fa5a4e;
-    background-color: #207178;
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .menu_inferior a:hover {
-    color: #fff;
-    text-decoration: none;
-    /* text-shadow: 1px 1px 4px #fff; */
+    color: #78362C;
+    font-weight: bolder;
+    text-shadow: 1px 1px 4px #fff; 
 }
 
 .menu_superior {
@@ -97,7 +92,8 @@ main {
     background-size: contain;
     box-sizing: border-box;
     padding-right: 10px;
-    border-radius: 3px;
+    border-radius: 5px;
+    border-color: #fff;
 }
 
 .menu_superior .img_busqueda {
@@ -123,7 +119,7 @@ main {
 
 .numero-carrito{
     position: absolute;
-    background-color: #207178;
+    background-color: #78362C;
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -147,6 +143,9 @@ main {
 .redes img {
     max-width: 3em;
     height: auto;
+}
+.d-none{
+    display: none;
 }
 
 @media screen and (min-width:47em) {
