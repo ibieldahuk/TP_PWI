@@ -1,5 +1,5 @@
 let regexNombreApellido = /^[a-zA-Z]+$/;
-let regexNumero = /^[0-9]{6}+\-[0-9]{4}+$/;
+let regexNumero = /^(?:\d{4}-)?\d{4}$/;
 
 let formulario = document.querySelector("#form-contacto");
 let botonEnviar = document.querySelector(".boton");
