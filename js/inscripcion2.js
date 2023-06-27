@@ -105,3 +105,44 @@ function calcularMonto() {
     let total = subtotal * cantidadInscriptos;
     document.querySelector('#monto').innerHTML = '$' + total + '.-';
 }
+
+//HAGO CLICK EN EL BOTÓN DE INSCRIPCIÓN
+document.querySelector('#inscribirse').addEventListener('click', function () {
+    let nroCarrito = document.querySelector('.numero-carrito');
+    //SI NO EXISTÍA NINGÚN VALOR DE CURSOS INSCRIPTOS
+    if (isNaN(sessionStorage.getItem('nroCompras')) || sessionStorage.getItem('nroCompras') == null) {
+        //LE SUMO UNO (1) AL NÚMERO DE INSCRIPCIONES
+        sessionStorage.setItem('nroCompras', 1);
+        //AGREGO EL NÚMERO DE INSCRIPCIONES AL NÚMERO DEL CARRITO
+        nroCarrito.innerHTML = sessionStorage.getItem('nroCompras');
+        //LE SACO EL DISPLAY:NONE AL CSS PARA QUE SE VEA
+        nroCarrito.classList.toggle('d-none');
+    //SI SÍ EXISTÍA UN VALOR DE CURSOS INSCRIPTOS
+    } else {
+        //LE SUMO UNO AL NÚMERO DE INSCRIPTOS
+        sessionStorage.setItem('nroCompras', parseInt(sessionStorage.getItem('nroCompras')) + 1);
+        //ACTUALIZO EL NÚMERO DEL CARRITO
+        nroCarrito.innerHTML = sessionStorage.getItem('nroCompras');
+    }
+});
+//CUANDO SE GARGA LA PÁGINA
+// window.onload = function () {
+//     mostrarNroCarrito();
+// };
+
+//function actualizarNroCarrito () {
+//}
+
+// function mostrarNroCarrito () {    
+//     //ASUMO QUE EL NÚMERO DE CARRITO ESTÁ EN DISPLAY:NONE
+//     //CHEQUEO SI HAY UN NÚMERO DE COMPRAS GUARDADO EN LOCALSTORAGE
+//     console.log(window.localStorage.getItem('nroCompras'))
+//     if (window.localStorage.getItem('nroCompras') != null) {
+//         let nroCarrito = document.querySelector('.numero-carrito');
+//         //ASUMO QUE EL NÚMERO DE CARRITO NO EXISTE YA QUE RECIÉN SE CARGÓ LA PÁGINA
+//         //ASIGNO EL NÚMERO DE COMPRAS AL NÚMERO DEL CARRITO
+//         nroCarrito.innerHTML = window.localStorage.getItem('nroCompras');
+//         //LE CAMBIO LA PROPIEDAD DISPLAY ASÍ SE VE
+//         nroCarrito.classList.toggle('d-none');
+//     }
+// }
