@@ -141,3 +141,99 @@ function guardarCompra() {
     sessionStorage.setItem('compras', JSON.stringify(listaCompras));
     imprimirCompras();
 }
+
+function validarForm() {
+    let regexNombreApellido = /^[a-zA-Z]+$/;
+    let regexDni = /^[0-9]$/;
+    let regexNumero = /^(?:\d{4}-)?\d{4}$/;
+    let regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    let mensajeError = '';
+    let error = false;
+    let selecCurso = document.getElementsByName('selec_curso');
+    let seleccion = false;
+    selecCurso.forEach((radioIn) => {
+        if (radioIn.checked) {
+            seleccion = true;
+        }
+    });
+    if (!seleccion) {
+        mensajeError += 'Debe seleccionar algún curso<br>';
+        error = true;
+    }
+    let lineasForm = document.querySelectorAll('.linea_inscripcion');
+    let nombres = [];
+    let apellidos = [];
+    let dnis = [];
+    let emails = [];
+    let telefonos = [];
+    lineasForm.forEach((linea) => {
+        nombres.push(linea.querySelector('input[name="nombre"]'));
+        apellidos.push(linea.querySelector('input[name="apellido"]'));
+        dnis.push(linea.querySelector('input[name="dni"]'));
+        emails.push(linea.querySelector('input[name="email"]'));
+        telefonos.push(linea.querySelector('input[name="telefono"]'));
+    });
+
+    let nombreEstaOk = true;
+    nombres.forEach((elemento) => {
+        valor = elemento.value
+        if (!regexNombreApellido.test(valor)) {
+            nombreEstaOk = false;
+        }
+    });
+    if (!nombreEstaOk) {
+        error = true;
+        mensajeError += '<p>El nombre no es válido</p>';
+    }
+
+    let apellidoEstaOk = true;
+    apellidos.forEach((elemento) => {
+        valor = elemento.value
+        if (!regexNombreApellido.test(valor)) {
+            apellidoEstaOk = false;
+        }
+    });
+    if (!apellidoEstaOk) {
+        error = true;
+        mensajeError += '<p>El apellido no es válido</p>';
+    }
+
+    let dniEstaOk = true;
+    dnis.forEach((elemento) => {
+        valor = elemento.value
+        if (!regexDni.test(valor)) {
+            dniEstaOk = false;
+        }
+    });
+    if (!dniEstaOk) {
+        error = true;
+        mensajeError += '<p>El dni no es válido</p>';
+    }
+
+    let emailEstaOk = true;
+    emails.forEach((elemento) => {
+        valor = elemento.value
+        if (!regexEmail.test(valor)) {
+            emailEstaOk = false;
+        }
+    });
+    if (!emailEstaOk) {
+        error = true;
+        mensajeError += '<p>El email no es válido</p>';
+    }
+
+    let telefonoEstaOk = true;
+    telefonos.forEach((elemento) => {
+        valor = elemento.value
+        if (!regexNumero.test(valor)) {
+            telefonoEstaOk = false;
+        }
+    });
+    if (!telefonoEstaOk) {
+        error = true;
+        mensajeError += '<p>El telefono no es válido</p>';
+    }
+
+    document.querySelector('#mensaje-error').innerHTML = mensajeError;
+    return !error;
+}
