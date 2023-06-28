@@ -56,7 +56,7 @@ button{
     width: 30%;
     height: 100%;
     background-color: #78362C;
-    z-index: 1;
+    z-index: 10;
 }
 .popup-compra h2{
     color: #fff;
@@ -98,7 +98,7 @@ button{
     left: 50%;
     transform: translate(-50%, 0);
 }
-.bn-comprar, .compra, #inscribirse, .en_boton, .boton, .btn-aceptar{
+.bn-comprar, .compra, #inscribirse, .en_boton, .boton, .btn-aceptar, .inscripcion{
     appearance: none;
     background-color: #FCFCFD;
     border-radius: 4px;

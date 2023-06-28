@@ -131,24 +131,38 @@
     margin: 0px;
 }
 
-.inscripcion{
-    background-color: #237178;
+.inscripcion, .compra-1, .compra-2, .compra-3{
+    background-color: #264678;
     color: #fff;
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px;
 }
+.inscripcion:focus{
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+.inscripcion:hover{
+    box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #1c3358 0 -3px 0 inset;
+    background-color: #ffffff;
+    color: #000000;
+}
+.inscripcion:active{
+    box-shadow: #D6D6E7 0 3px 7px inset;
+}
+
 
 @media screen and (min-width: 47em) {
     .detalle {
+        max-width: 100%;
         flex-direction: row;
+        margin-top: 5.813em;
     }
 
     .foto_curso {
-        width: 30%;
+        width: 50%;
     }
 
     .datos_curso {
-        width: 30%;
+        width: 50%;
     }
 
     .contenidos_curso {
@@ -158,138 +172,84 @@
     .info {
         flex-direction: row;
     }
+    .info_docente{
+        margin: 5.813em 0px;
+    }
 }
 
 /*aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
 
-.curso-1{
+.curso{
     position: relative;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center top;
+    width: 200px;
+    height: 199px;
+    margin: 30px;
+}
+
+.precio{
+    position: absolute;
+    background-color: #353535;
+    color: #fff;
+    right: 0;
+    top: 0;
+}
+
+.tiempo{
+    position: absolute;
+    top: 45%;
+    font-size: 20px;
+}
+
+.nombre{
+    position: absolute;
+    top: 45%;
+    right: 0;
+    font-size: 20px;
+}
+
+.detalles{
+    position: absolute;
+    font-size: 11px;
+    bottom: 0;
+    right: 32%;
+}
+
+.compra{
+    position: absolute;
+    top: 70%;
+    right: 30%;
+    background-color: #264678;
+    padding: 10px 5px;
+    color: #fff;
+    display: inline-flex;
+}
+.compra:focus{
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.compra:hover{
+    box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #1c3358 0 -3px 0 inset;
+    background-color: #fff;
+    color: #000000;
+}
+.compra:active{
+    box-shadow: #D6D6E7 0 3px 7px inset;
+}
+
+
+.curso-1 {
     background-image: url(../img/curso_destacado1.jpg);
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center top;
-    width: 200px;
-    height: 199px;
-    margin: 30px;
 }
-.precio-1{
-    position: absolute;
-    background-color: #353535;
-    color: #fff;
-    right: 0;
-    top: 0;
-}
-.tiempo-1{
-    position: absolute;
-    top: 45%;
-    font-size: 20px;
-}
-.nombre-1{
-    position: absolute;
-    top: 45%;
-    right: 0;
-    font-size: 20px;
-}
-.detalles-1{
-    position: absolute;
-    font-size: 11px;
-    bottom: 0;
-    right: 32%;
-}
-.compra-1{
-    position: absolute;
-    top: 75%;
-    right: 30%;
-    background-color: #237178;
-    color: #fff;
-    border-radius: 5px;
-    padding: 5px;
-}
+
 .curso-2{
-    position: relative;
     background-image: url(../img/curso_destacado2.jpg);
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center top;
-    width: 200px;
-    height: 199px;
-    margin: 30px;
 }
-.precio-2{
-    position: absolute;
-    background-color: #353535;
-    color: #fff;
-    right: 0;
-    top: 0;
-}
-.tiempo-2{
-    position: absolute;
-    top: 45%;
-    font-size: 20px;
-}
-.nombre-2{
-    position: absolute;
-    top: 45%;
-    right: 0;
-    font-size: 20px;
-}
-.detalles-2{
-    position: absolute;
-    font-size: 11px;
-    bottom: 0;
-    right: 32%;
-}
-.compra-2{
-    position: absolute;
-    top: 75%;
-    right: 30%;
-    background-color: #237178;
-    color: #fff;
-    border-radius: 5px;
-    padding: 5px;
-}
+
 .curso-3{
-    position: relative;
     background-image: url(../img/curso_destacado3.jpg);
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center top;
-    width: 200px;
-    height: 199px;
-    margin: 30px;
-}
-.precio-3{
-    position: absolute;
-    background-color: #353535;
-    color: #fff;
-    right: 0;
-    top: 0;
-}
-.tiempo-3{
-    position: absolute;
-    top: 45%;
-    font-size: 20px;
-}
-.nombre-3{
-    position: absolute;
-    top: 45%;
-    right: 0;
-    font-size: 20px;
-}
-.detalles-3{
-    position: absolute;
-    font-size: 11px;
-    bottom: 0;
-    right: 32%;
-}
-.compra-3{
-    position: absolute;
-    top: 75%;
-    right: 30%;
-    background-color: #237178;
-    color: #fff;
-    border-radius: 5px;
-    padding: 5px;
 }
 
 a {
