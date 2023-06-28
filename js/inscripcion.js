@@ -144,7 +144,7 @@ function guardarCompra() {
 
 function validarForm() {
     let regexNombreApellido = /^[a-zA-Z]+$/;
-    let regexDni = /^[0-9]$/;
+    let regexDni = /^[0-9]{8}$/;
     let regexNumero = /^(?:\d{4}-)?\d{4}$/;
     let regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     let mensajeError = '';
