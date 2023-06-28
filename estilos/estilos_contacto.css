@@ -58,7 +58,31 @@ h2 {
 .ubicacion iframe {
     max-width: 100%;
 }
+.pop-consulta{
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    background-color: #78362C;
+    color: #fff;
+    width: 25%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 3px 6px 27px 1px rgb(166, 166, 166);
+    -moz-box-shadow: 3px 6px 27px 1px rgb(166, 166, 166);
+    box-shadow: 3px 6px 27px 1px rgba(166,166,166,0.78);
+    border-radius: 5px;
+}
 
+.pop-consulta a{
+    background-color: #264678;
+    color: #fff;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 5px;
+}
 @media screen and (min-width: 47em) {
     .datos {
         flex-direction: row;

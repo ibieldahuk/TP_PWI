@@ -3,6 +3,8 @@ let regexNumero = /^(?:\d{4}-)?\d{4}$/;
 
 let formulario = document.querySelector("#form-contacto");
 let botonEnviar = document.querySelector(".boton");
+const btnAceptar = document.querySelector(".btn-aceptar");
+const popupConsulta = document.querySelector(".pop-consulta");
 
 formulario.addEventListener("submit", (e)=>{
     e.preventDefault();
@@ -41,7 +43,7 @@ function validar(){
     if(error){
         document.getElementById("mensaje").innerHTML = mensaje;
     }else {
-        formulario.submit();
+        popupConsulta.classList.toggle("d-none");
     }
    
 };

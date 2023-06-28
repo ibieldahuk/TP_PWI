@@ -235,6 +235,9 @@ main {
     justify-content: center;
     align-items: center;
 }
+.navegacion{
+    width: 100%;
+}
 
 .navegacion a, .integrantes p{
     color: #fff;
@@ -279,6 +282,7 @@ main {
     .footer {    
         display: flex;
         justify-content: center;
+        padding: 1.875em;
     }
 
 }
