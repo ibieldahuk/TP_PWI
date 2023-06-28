@@ -53,7 +53,7 @@
         <section class="principal">
             <article>
                 <h3>Inscripción</h3>
-                <form action="#" method="get" class="formulario_inscripcion" id="formulario_inscripcion">
+                <form action="#" method="get" class="formulario_inscripcion" id="formulario_inscripcion" onsubmit="return validarForm()">
                     <div class="selector_curso">
                         <input type="radio" name="selec_curso" value="html" id="curso_html">
                         <label for="curso_html">HTML</label>
@@ -77,6 +77,7 @@
                         <input type="button" class="eliminar_persona" value="-" onClick="borrarDatos()">
                     </div>
                 </form>
+                <div id="mensaje-error"></div>
             </article>
             <article class="agregar_persona">
                 <input type="button" value="+" id="agregar_persona">
@@ -84,7 +85,7 @@
         </section>
         <section class="monto-boton">
             <span id="monto">$000.-</span>
-            <button id="inscribirse">INCRIBIRSE</button>
+            <button type="submit" form="formulario_inscripcion" id="inscribirse">INCRIBIRSE</button>
         </section>
         <a href="#inicio" class="inicio"></a>
     </main>
