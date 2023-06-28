@@ -142,6 +142,8 @@ function guardarCompra() {
     imprimirCompras();
 }
 
+
+
 function validarForm() {
     let regexNombreApellido = /^[a-zA-Z]+$/;
     let regexDni = /^[0-9]{8}$/;
@@ -237,3 +239,5 @@ function validarForm() {
     document.querySelector('#mensaje-error').innerHTML = mensajeError;
     return !error;
 }
+
+
