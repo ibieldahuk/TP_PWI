@@ -7,6 +7,7 @@ body {
 button{
     cursor: pointer;
 }
+
 .carrito{
     position: relative;
     width: 40px;
@@ -86,6 +87,18 @@ button{
 }
 .bn-comprar{
     align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 48px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: left;
+    font-size: 18px;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.bn-comprar, .compra, #inscribirse, .en_boton, .boton, .btn-aceptar{
     appearance: none;
     background-color: #FCFCFD;
     border-radius: 4px;
@@ -94,15 +107,9 @@ button{
     box-sizing: border-box;
     color: #000000;
     display: inline-flex;
-    height: 48px;
-    justify-content: center;
     line-height: 1;
     list-style: none;
     overflow: hidden;
-    padding-left: 16px;
-    padding-right: 16px;
-    position: absolute;
-    text-align: left;
     text-decoration: none;
     transition: box-shadow .15s,transform .15s;
     user-select: none;
@@ -110,22 +117,18 @@ button{
     touch-action: manipulation;
     white-space: nowrap;
     will-change: box-shadow,transform;
-    font-size: 18px;
-    bottom: 10%;
-    left: 50%;
-    transform: translate(-50%, 0);
 }
-.bn-comprar:focus {
+.bn-comprar:focus{
     box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
 }
    
-.bn-comprar:hover {
+.bn-comprar:hover{
     box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #1c3358 0 -3px 0 inset;
     background-color: #264678;
     color: #fff;
 }
    
-.bn-comprare:active {
+.bn-comprar:active{
     box-shadow: #D6D6E7 0 3px 7px inset;
 }
 
@@ -244,7 +247,9 @@ main {
     text-decoration: none;
 }
 
-
+.integrantes p{
+    margin: 0;
+}
 
 .redes {
     display: flex;

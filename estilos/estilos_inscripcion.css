@@ -52,12 +52,25 @@
     padding: 3px;
     margin: 0px 10px;
 }
-.monto-boton button{
-    background-color: #207178;
-    color: #fff;
+#inscribirse{
     border-radius: 9px;
     border-style: none;
-    padding: 8px;
+    padding: 0.625em;
+    background-color: #264678;
+    color: #fff;
+}
+#inscribirse:focus{
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+   
+#inscribirse:hover{
+    box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #1c3358 0 -3px 0 inset;
+    background-color: #ffffff;
+    color: #000000;
+}
+   
+#inscribirse:active{
+    box-shadow: #D6D6E7 0 3px 7px inset;
 }
 .monto-boton button:hover{
     background-color: #88c6cc;
