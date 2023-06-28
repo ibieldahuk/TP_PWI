@@ -10,20 +10,36 @@ btnCerrar.addEventListener("click", ()=>{
     popup.classList.add("d-none");
 });
 
-//CUANDO SE GARGA LA PÁGINA
 window.onload = function () {
-    mostrarNroCarrito();
+    imprimirCompras();
 };
 
-function mostrarNroCarrito () {    
-    //ASUMO QUE EL NÚMERO DE CARRITO ESTÁ EN DISPLAY:NONE
-    //CHEQUEO SI HAY UN NÚMERO DE COMPRAS GUARDADO EN LOCALSTORAGE
-    if (sessionStorage.getItem('nroCompras') != null) {
+function imprimirCompras() {
+    let listaCompras = JSON.parse(sessionStorage.getItem('compras'));
+    if (listaCompras != null) {
+        let contenedorCompras = document.querySelector('#items-carrito');
+        let total = document.querySelector('.monto-total');
+        let totalCalculado = 0;
         let nroCarrito = document.querySelector('.numero-carrito');
-        //ASUMO QUE EL NÚMERO DE CARRITO NO EXISTE YA QUE RECIÉN SE CARGÓ LA PÁGINA
-        //ASIGNO EL NÚMERO DE COMPRAS AL NÚMERO DEL CARRITO
-        nroCarrito.innerHTML = sessionStorage.getItem('nroCompras');
-        //LE CAMBIO LA PROPIEDAD DISPLAY ASÍ SE VE
+        let cantCompras = 0;
+        contenedorCompras.innerHTML = '';
+        listaCompras.forEach((curso) => {
+            let contenedor = document.createElement('div');
+            let nombreCurso = document.createElement('p');
+            let cantidad = document.createElement('p');
+            let subtotal = document.createElement('p');
+            nombreCurso.appendChild(document.createTextNode(curso.curso));
+            cantidad.appendChild(document.createTextNode('x' + curso.cantidad));
+            subtotal.appendChild(document.createTextNode('$' + curso.subtotal + '.-'));
+            contenedor.appendChild(nombreCurso);
+            contenedor.appendChild(cantidad);
+            contenedor.appendChild(subtotal);
+            contenedorCompras.appendChild(contenedor);
+            totalCalculado += curso.subtotal;
+            cantCompras++;
+        });
+        total.innerHTML = '$' + totalCalculado + '.-';
+        nroCarrito.innerHTML = cantCompras;
         nroCarrito.classList.toggle('d-none');
     }
 }

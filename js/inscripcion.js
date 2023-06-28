@@ -1,70 +1,143 @@
-const agregarPersona = document.getElementById("agregar-persona");
-const botonesSuprimir = document.querySelectorAll("#suprimir");
-let lineaInscripcion = document.querySelector('.linea-inscripcion');
-let montoTotal = document.querySelector("#monto");
-const inscribirse = document.querySelector("#inscribirse");
-let personas = 1;
-let botones = document.querySelectorAll(".opciones");
-let btnsEliminarPersona = document.querySelectorAll(".eliminar-persona");
+let contadorID = 1;
 
-//AGREGAR PERSONA
-agregarPersona.addEventListener("click", () => {
-  var nuevaLineaInscripcion = lineaInscripcion.cloneNode(true);
-  personas++;
-  var inputs = nuevaLineaInscripcion.querySelectorAll('input');
-  inputs.forEach(function (input) {
-    input.value = '';
-  });
-  lineaInscripcion.parentNode.insertBefore(nuevaLineaInscripcion, null);
+document.querySelector('#agregar_persona').addEventListener('click', function () {
+    contadorID++;
+    //DIV
+    let nodoDiv = document.createElement('div');
+    nodoDiv.setAttribute('class', 'linea_inscripcion');
+    nodoDiv.setAttribute('id', 'linea_inscripcion_' + contadorID);
+    //INPUTS
+    let nodoInNombre = document.createElement('input');
+    nodoInNombre.setAttribute('type', 'text');
+    nodoInNombre.setAttribute('name', 'nombre');
+    nodoInNombre.setAttribute('placeholder', 'Nombre');
+    let nodoInApellido = document.createElement('input');
+    nodoInApellido.setAttribute('type', 'text');
+    nodoInApellido.setAttribute('name', 'apellido');
+    nodoInApellido.setAttribute('placeholder', 'Apellido');
+    let nodoInDNI = document.createElement('input');
+    nodoInDNI.setAttribute('type', 'text');
+    nodoInDNI.setAttribute('name', 'dni');
+    nodoInDNI.setAttribute('placeholder', 'DNI');
+    let nodoInEMail = document.createElement('input');
+    nodoInEMail.setAttribute('type', 'email');
+    nodoInEMail.setAttribute('name', 'email');
+    nodoInEMail.setAttribute('placeholder', 'E-Mail');
+    let nodoInTel = document.createElement('input');
+    nodoInTel.setAttribute('type', 'tel');
+    nodoInTel.setAttribute('name', 'telefono');
+    nodoInTel.setAttribute('placeholder', 'Teléfono');
+    let nodoInBtn = document.createElement('input');
+    nodoInBtn.setAttribute('type', 'button');
+    nodoInBtn.setAttribute('class', 'eliminar_persona');
+    nodoInBtn.setAttribute('value', '-');
+    nodoInBtn.setAttribute('onClick', 'eliminarLinea(' + contadorID + ')');
+    //APPENDS
+    nodoDiv.appendChild(nodoInNombre);
+    nodoDiv.appendChild(nodoInApellido);
+    nodoDiv.appendChild(nodoInDNI);
+    nodoDiv.appendChild(nodoInEMail);
+    nodoDiv.appendChild(nodoInTel);
+    nodoDiv.appendChild(nodoInBtn);
+    document.querySelector('#formulario_inscripcion').appendChild(nodoDiv);
 });
 
-//ELIMINAR PERSONA
-btnsEliminarPersona.forEach((item) => {
-  item.addEventListener("click", function () {
-    console.log("acá");
-    this.parentNode.remove();
-  });
+document.querySelector('#agregar_persona').addEventListener('click', calcularMonto);
+
+document.getElementsByName('selec_curso').forEach((item) => {
+    item.addEventListener('change', function () {
+        calcularMonto();
+    })
 });
 
-function toggleClase(boton) {
-  // Recorrer todos los botones y deseleccionar los que están seleccionados
-  botones.forEach(function (btn) {
-    if (btn !== boton && btn.classList.contains('clicked')) {
-      btn.classList.remove('clicked');
+function eliminarLinea(id) {
+    document.querySelector('#linea_inscripcion_' + id).remove();
+    calcularMonto();
+}
+
+function borrarDatos() {
+    document.querySelector('#linea_inscripcion_1').childNodes.forEach((item) => {
+        if (item.type == 'text' || item.type == 'email' || item.type == 'tel') {
+            item.value = '';
+        }
+    });
+}
+
+function definirCursoSeleccionado() {
+    let curso = ''
+    document.getElementsByName('selec_curso').forEach((item) => {
+        if (item.checked) {
+            curso = item.value;
+        }
+    });
+    return curso;
+}
+
+function definirSubtotal(curso) {
+    let subtotal = 0;
+    switch (curso) {
+        case 'html':
+            subtotal = 50000;
+            break;
+        case 'css':
+            subtotal = 25000;
+            break;
+        case 'js':
+            subtotal = 90000;
+            break;
+        case 'php':
+            subtotal = 10000;
+            break;
+        case 'mysql':
+            subtotal = 60000;
+            break;
+        case 'java':
+            subtotal = 120000;
+            break;
     }
-  });
+    return subtotal;
+}
 
-  // Alternar la clase del botón actual
-  boton.classList.toggle('clicked');
-  actualizarMonto();
-};
+function calcularMonto() {
+    let curso = definirCursoSeleccionado();
+    let subtotal = definirSubtotal(curso);
+    let cantidadInscriptos = document.querySelectorAll('.linea_inscripcion').length;
+    let total = subtotal * cantidadInscriptos;
+    document.querySelector('#monto').innerHTML = '$' + total + '.-';
+}
+window.addEventListener('load', function () {
+    document.querySelector('#inscribirse').addEventListener('click', guardarCompra);
+});
 
-function actualizarMonto() {
-  var monto = 0;
-  var botonesSeleccionados = document.querySelectorAll('.opciones.clicked');
-  botonesSeleccionados.forEach(function (btn) {
-
-    switch (btn.id) {
-      case 'php':
-        monto += 10000;
-        break;
-      case 'html':
-        monto += 50000;
-        break;
-      case 'css':
-        monto += 25000;
-        break;
-      case 'java':
-        monto += 120000;
-        break;
-      case 'javas':
-        monto += 90000;
-        break;
-      case 'mysql':
-        monto += 60000;
-        break;
-    };
-  });
-
-  montoTotal.textContent = '$' + monto + '.-';
-};
+function guardarCompra() {
+    let cantLineas = document.querySelectorAll('.linea_inscripcion').length;
+    let cursoSelec = definirCursoSeleccionado();
+    let listaCompras = JSON.parse(sessionStorage.getItem('compras'));
+    if (listaCompras != null) {
+        let elCursoYaExiste = false;
+        listaCompras.forEach((compra) => {
+            if (cursoSelec == compra.curso) {
+                elCursoYaExiste = true;
+                compra.cantidad += cantLineas;
+                compra.subtotal += definirSubtotal(cursoSelec) * cantLineas
+            }
+        });
+        if (!elCursoYaExiste) {
+            let compra = {
+                curso : cursoSelec,
+                cantidad : cantLineas,
+                subtotal : definirSubtotal(cursoSelec) * cantLineas
+            };
+            listaCompras.push(compra);
+        }
+    } else {
+        let compra = {
+            curso : cursoSelec,
+            cantidad : cantLineas,
+            subtotal : definirSubtotal(cursoSelec) * cantLineas
+        };
+        listaCompras = [compra];
+    }
+    sessionStorage.setItem('compras', JSON.stringify(listaCompras));
+    imprimirCompras();
+}
