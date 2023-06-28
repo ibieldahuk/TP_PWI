@@ -105,9 +105,11 @@ function calcularMonto() {
     let total = subtotal * cantidadInscriptos;
     document.querySelector('#monto').innerHTML = '$' + total + '.-';
 }
+window.addEventListener('load', function () {
+    document.querySelector('#inscribirse').addEventListener('click', guardarCompra3);
+});
 
-//HAGO CLICK EN EL BOTÓN DE INSCRIPCIÓN
-document.querySelector('#inscribirse').addEventListener('click', function () {
+function guardarCompra() {
     let nroCarrito = document.querySelector('.numero-carrito');
     //SI NO EXISTÍA NINGÚN VALOR DE CURSOS INSCRIPTOS
     if (isNaN(sessionStorage.getItem('nroCompras')) || sessionStorage.getItem('nroCompras') == null) {
@@ -124,7 +126,119 @@ document.querySelector('#inscribirse').addEventListener('click', function () {
         //ACTUALIZO EL NÚMERO DEL CARRITO
         nroCarrito.innerHTML = sessionStorage.getItem('nroCompras');
     }
-});
+}
+
+function guardarCompra3() {
+    let cantLineas = document.querySelectorAll('.linea_inscripcion').length;
+    let cursoSelec = definirCursoSeleccionado();
+    let listaCompras = JSON.parse(sessionStorage.getItem('compras'));
+
+    if (listaCompras != null) {
+        let elCursoYaExiste = false;
+        listaCompras.forEach((compra) => {
+            if (cursoSelec == compra.curso) {
+                elCursoYaExiste = true;
+                compra.cantidad += cantLineas;
+                compra.subtotal += definirSubtotal(cursoSelec) * cantLineas
+            }
+        });
+        if (!elCursoYaExiste) {
+            let compra = {
+                curso : cursoSelec,
+                cantidad : cantLineas,
+                subtotal : definirSubtotal(cursoSelec) * cantLineas
+            };
+            listaCompras.push(compra);
+        }
+    } else {
+        let compra = {
+            curso : cursoSelec,
+            cantidad : cantLineas,
+            subtotal : definirSubtotal(cursoSelec) * cantLineas
+        };
+        listaCompras = [compra];
+    }
+
+    sessionStorage.setItem('compras', JSON.stringify(listaCompras));
+
+    /////////////////////////////
+    imprimirCompras();
+    /////////////////////////////
+}
+
+function imprimirCompras() {
+    let listaCompras = JSON.parse(sessionStorage.getItem('compras'));
+    if (listaCompras != null) {
+        let contenedorCompras = document.querySelector('#items-carrito');
+        let total = document.querySelector('.monto-total');
+        let totalCalculado = 0;
+        let nroCarrito = document.querySelector('.numero-carrito');
+        let cantCompras = 0;
+        contenedorCompras.innerHTML = '';
+        listaCompras.forEach((curso) => {
+            let contenedor = document.createElement('div');
+            let nombreCurso = document.createElement('p');
+            let cantidad = document.createElement('p');
+            let subtotal = document.createElement('p');
+            nombreCurso.appendChild(document.createTextNode(curso.curso));
+            cantidad.appendChild(document.createTextNode('x' + curso.cantidad));
+            subtotal.appendChild(document.createTextNode('$' + curso.subtotal + '.-'));
+            contenedor.appendChild(nombreCurso);
+            contenedor.appendChild(cantidad);
+            contenedor.appendChild(subtotal);
+            contenedorCompras.appendChild(contenedor);
+            totalCalculado += curso.subtotal;
+            cantCompras++;
+        });
+        total.innerHTML = '$' + totalCalculado + '.-';
+        nroCarrito.innerHTML = cantCompras;
+        nroCarrito.classList.toggle('d-none');
+    }
+}
+
+function guardarCompra2() {
+    imprimirCompras();
+    // let nombre_recivido = document.querySelector('#nombre').value;
+    // let apellido_recivido = document.querySelector('#apellido').value;
+    // let dni_recivido = document.querySelector('#dni').value;
+    // let email_recivido = document.querySelector('#email').value;
+    // let telefono_recivido = document.querySelector('#telefono').value;
+    // let curso_recivido = definirCursoSeleccionado();
+    // // let listaCompras = {
+    // //     nombre : nombre_recivido,
+    // //     apellido : apellido_recivido,
+    // //     dni : dni_recivido,
+    // //     email : email_recivido,
+    // //     telefono : telefono_recivido,
+    // //     curso : curso_recivido
+    // // };
+    // let nombre = document.createElement('p');
+    // let apellido = document.createElement('p');
+    // let dni = document.createElement('p');
+    // let email = document.createElement('p');
+    // let telefono = document.createElement('p');
+    // let curso = document.createElement('p');
+    // let tNombre = document.createTextNode(nombre_recivido);
+    // let tApellido = document.createTextNode(apellido_recivido);
+    // let tDni = document.createTextNode(dni_recivido);
+    // let tEmail = document.createTextNode(email_recivido);
+    // let tTelefono = document.createTextNode(telefono_recivido);
+    // let tCurso = document.createTextNode(curso_recivido);
+    // nombre.appendChild(tNombre);
+    // apellido.appendChild(tApellido);
+    // dni.appendChild(tDni);
+    // email.appendChild(tEmail);
+    // telefono.appendChild(tTelefono);
+    // curso.appendChild(tCurso);
+    // let padre = document.querySelector('#items-carrito');
+    // padre.appendChild(nombre);
+    // padre.appendChild(apellido);
+    // padre.appendChild(dni);
+    // padre.appendChild(email);
+    // padre.appendChild(telefono);
+    // padre.appendChild(curso);
+}
+
 //CUANDO SE GARGA LA PÁGINA
 // window.onload = function () {
 //     mostrarNroCarrito();

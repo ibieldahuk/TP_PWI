@@ -18,7 +18,6 @@ window.onload = function () {
 function mostrarNroCarrito () {    
     //ASUMO QUE EL NÚMERO DE CARRITO ESTÁ EN DISPLAY:NONE
     //CHEQUEO SI HAY UN NÚMERO DE COMPRAS GUARDADO EN LOCALSTORAGE
-    console.log(sessionStorage.getItem('nroCompras'))
     if (sessionStorage.getItem('nroCompras') != null) {
         let nroCarrito = document.querySelector('.numero-carrito');
         //ASUMO QUE EL NÚMERO DE CARRITO NO EXISTE YA QUE RECIÉN SE CARGÓ LA PÁGINA
