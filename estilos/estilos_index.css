@@ -86,9 +86,14 @@ body {
 
 .medios_de_pago {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    padding: 0;
+}
+.titulo-mp{
+    text-align: center;
+    margin-top: 100px;
 }
 
 .medios_de_pago .titulo {
@@ -164,24 +169,42 @@ body {
 
 
 .curso-1 {
-    background-image: url(../img/curso_destacado1.jpg);
+    background-image: url(../img/html-logo.png);
+    background-size: 100px 99.5px;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 
 .curso-2{
-    background-image: url(../img/curso_destacado2.jpg);
+    background-image: url(../img/css-logo.png);
+    background-size: 100px 99.5px;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 
 .curso-3{
-    background-image: url(../img/curso_destacado3.jpg);
+    background-image: url(../img/js-logo.png);
+    background-size: 100px 99.5px;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 .curso-4{
-    background-image: url(../img/curso_destacado4.jpg);
+    background-image: url(../img/php-logo.png);
+    background-size: 100px 99.5px;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 .curso-5{
-    background-image: url(../img/curso_destacado5.jpg);
+    background-image: url(../img/mysql-logo.png);
+    background-size: 100px 99.5px;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 .curso-6{
-    background-image: url(../img/curso_destacado6.jpg);
+    background-image: url(../img/java-logo.png);
+    background-size: 100px 99.5px;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 .cursos a{
     text-decoration: none;
