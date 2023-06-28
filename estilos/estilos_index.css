@@ -142,13 +142,26 @@ body {
 
 .compra{
     position: absolute;
-    top: 75%;
+    top: 70%;
     right: 30%;
-    background-color: #237178;
+    background-color: #264678;
+    padding: 10px 5px;
     color: #fff;
-    border-radius: 5px;
-    padding: 5px;
+    display: inline-flex;
 }
+.compra:focus{
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.compra:hover{
+    box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #1c3358 0 -3px 0 inset;
+    background-color: #fff;
+    color: #000000;
+}
+.compra:active{
+    box-shadow: #D6D6E7 0 3px 7px inset;
+}
+
 
 .curso-1 {
     background-image: url(../img/curso_destacado1.jpg);
