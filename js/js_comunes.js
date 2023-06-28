@@ -1,6 +1,7 @@
 const btnCerrar = document.querySelector(".boton-cierre");
 const popup = document.querySelector(".popup-compra");
 const btnCarrito = document.querySelector(".carrito");
+const btnCompra = document.querySelector('.bn-comprar');
 
 btnCarrito.addEventListener("click", ()=>{
     popup.classList.remove("d-none");
@@ -8,6 +9,10 @@ btnCarrito.addEventListener("click", ()=>{
 
 btnCerrar.addEventListener("click", ()=>{
     popup.classList.add("d-none");
+});
+
+btnCompra.addEventListener('click', () => {
+    sessionStorage.clear();
 });
 
 window.onload = function () {
@@ -40,6 +45,8 @@ function imprimirCompras() {
         });
         total.innerHTML = '$' + totalCalculado + '.-';
         nroCarrito.innerHTML = cantCompras;
-        nroCarrito.classList.toggle('d-none');
+        if (cantCompras != 0 && nroCarrito.classList.contains('d-none')) {
+            nroCarrito.classList.toggle('d-none');
+        }
     }
 }
