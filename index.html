@@ -168,21 +168,28 @@
             *   *   *****   ****    *****   *****   *****       **** *       *       *   *   *****   *****
         -->
 
-        <section  class="medios_de_pago">
-            <article class="titulo">
-                <h2>iMediosDePago</h2>
+        <h2 class="titulo-mp">iMedios de pago</h2>
+        <section class="medios_de_pago">
+            <article>
+                <img src="img/visa-logo.svg" alt="">
             </article>
             <article>
-                <img src="img/medio_de_pago1.jpg" alt="">
+                <img src="img/mastercard-logo.svg" alt="">
             </article>
             <article>
-                <img src="img/medio_de_pago2.jpg" alt="">
+                <img src="img/amex-logo.svg" alt="">
             </article>
             <article>
-                <img src="img/medio_de_pago3.jpg" alt="">
+                <img src="img/mp-logo.svg" alt="">
             </article>
             <article>
-                <img src="img/medio_de_pago4.jpg" alt="">
+                <img src="img/maestro-logo.svg" alt="">
+            </article>
+            <article>
+                <img src="img/western-logo.svg" alt="">
+            </article>
+            <article>
+                <img src="img/dinersclub-logo.svg" alt="">
             </article>
         </section>
         <a href="#inicio" class="inicio"></a>
@@ -226,47 +233,7 @@
     </footer>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>
-       $(document).ready(function(){
-        $('.slider').slick({
-            dots: false,
-            infinite: true,
-            speed: 700,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 4000,
-            responsive: [
-                {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: false
-                }
-                },
-                {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-                },
-                {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-                }
-                // You can unslick at a given breakpoint now by adding:
-                // settings: "unslick"
-                // instead of a settings object
-            ]
-            });
-       });
-    </script>
+    <script src="js/index.js"></script>
     <script src="js/js_comunes.js"></script>
 </body>
 </html>
