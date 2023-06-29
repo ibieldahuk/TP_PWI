@@ -11,10 +11,6 @@ btnCerrar.addEventListener("click", ()=>{
     popup.classList.add("d-none");
 });
 
-// btnCompra.addEventListener('click', () => {
-//     sessionStorage.clear();
-// });
-
 window.onload = function () {
     imprimirCompras();
 };

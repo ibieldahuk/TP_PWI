@@ -44,12 +44,6 @@ document.querySelector('#agregar_persona').addEventListener('click', function ()
 
 document.querySelector('#agregar_persona').addEventListener('click', calcularMonto);
 
-// document.getElementsByName('selec_curso').forEach((item) => {
-//     item.addEventListener('change', function () {
-//         calcularMonto();
-//     })
-// });
-
 function eliminarLinea(id) {
     document.querySelector('#linea_inscripcion_' + id).remove();
     calcularMonto();
@@ -62,16 +56,6 @@ function borrarDatos() {
         }
     });
 }
-
-// function definirCursoSeleccionado() {
-//     let curso = ''
-//     document.getElementsByName('selec_curso').forEach((item) => {
-//         if (item.checked) {
-//             curso = item.value;
-//         }
-//     });
-//     return curso;
-// }
 
 function definirSubtotal(curso) {
     let subtotal = 0;
@@ -109,46 +93,14 @@ function calcularMonto() {
 }
 
 window.addEventListener('load', function () {
-    // document.querySelector('#inscribirse').addEventListener('click', () => {
-    //     sessionStorage.clear();
-    // });
-    calcularMonto();
+    if (sessionStorage.getItem('compras') != null) {
+        calcularMonto();
+    }
+    this.document.querySelector('#formulario_inscripcion').addEventListener("submit", (e)=>{
+        e.preventDefault();
+        validarForm();
+    });
 });
-
-// function guardarCompra() {
-//     let cantLineas = document.querySelectorAll('.linea_inscripcion').length;
-//     let cursoSelec = definirCursoSeleccionado();
-//     let listaCompras = JSON.parse(sessionStorage.getItem('compras'));
-//     if (listaCompras != null) {
-//         let elCursoYaExiste = false;
-//         listaCompras.forEach((compra) => {
-//             if (cursoSelec == compra.curso) {
-//                 elCursoYaExiste = true;
-//                 compra.cantidad += cantLineas;
-//                 compra.subtotal += definirSubtotal(cursoSelec) * cantLineas
-//             }
-//         });
-//         if (!elCursoYaExiste) {
-//             let compra = {
-//                 curso : cursoSelec,
-//                 cantidad : cantLineas,
-//                 subtotal : definirSubtotal(cursoSelec) * cantLineas
-//             };
-//             listaCompras.push(compra);
-//         }
-//     } else {
-//         let compra = {
-//             curso : cursoSelec,
-//             cantidad : cantLineas,
-//             subtotal : definirSubtotal(cursoSelec) * cantLineas
-//         };
-//         listaCompras = [compra];
-//     }
-//     sessionStorage.setItem('compras', JSON.stringify(listaCompras));
-//     imprimirCompras();
-// }
-
-
 
 function validarForm() {
     let regexNombreApellido = /^[a-zA-Z]+$/;
@@ -157,17 +109,6 @@ function validarForm() {
     let regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     let mensajeError = '';
     let error = false;
-    // let selecCurso = document.getElementsByName('selec_curso');
-    // let seleccion = false;
-    // selecCurso.forEach((radioIn) => {
-    //     if (radioIn.checked) {
-    //         seleccion = true;
-    //     }
-    // });
-    // if (!seleccion) {
-    //     mensajeError += 'Debe seleccionar algún curso<br>';
-    //     error = true;
-    // }
     let lineasForm = document.querySelectorAll('.linea_inscripcion');
     let nombres = [];
     let apellidos = [];
@@ -181,6 +122,7 @@ function validarForm() {
         emails.push(linea.querySelector('input[name="email"]'));
         telefonos.push(linea.querySelector('input[name="telefono"]'));
     });
+    console.log(dnis);
 
     let nombreEstaOk = true;
     nombres.forEach((elemento) => {
@@ -209,6 +151,7 @@ function validarForm() {
     let dniEstaOk = true;
     dnis.forEach((elemento) => {
         valor = elemento.value
+        console.log(valor);
         if (!regexDni.test(valor)) {
             dniEstaOk = false;
         }
@@ -241,12 +184,14 @@ function validarForm() {
         error = true;
         mensajeError += '<p>El telefono no es válido (debe cumplir el formato xxxx-xxxx).</p>';
     }
-
-    document.querySelector('#mensaje-error').innerHTML = mensajeError;
-    if (!error) {
+    if(error){
+        document.querySelector('#mensaje-error').innerHTML = mensajeError;
+    } else {
+        console.log('ok')
         sessionStorage.clear();
+        document.querySelector('.pop-ins').classList.toggle('d-none');
     }
-    return !error;
+    // return !error;
 }
 
 
