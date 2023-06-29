@@ -248,15 +248,24 @@
 
 
 .curso-1 {
-    background-image: url(../img/curso_destacado1.jpg);
+    background-image: url(../img/html-logo.png);
+    background-size: 100px 99.5px;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 
 .curso-2{
-    background-image: url(../img/curso_destacado2.jpg);
+    background-image: url(../img/css-logo.png);
+    background-size: 100px 99.5px;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 
 .curso-3{
-    background-image: url(../img/curso_destacado3.jpg);
+    background-image: url(../img/js-logo.png);
+    background-size: 100px 99.5px;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 
 a {
