@@ -53,7 +53,7 @@ button{
     position: fixed;
     top: 0;
     right: 0;
-    width: 30%;
+    width: 70%;
     height: 100%;
     background-color: #78362C;
     z-index: 10;
@@ -154,8 +154,8 @@ button{
 }
 
 .inicio{
-    width: 50px;
-    height: 50px;
+    width: 3.125em;
+    height: 3.125em;
     display: block;
     background-color: #207178;
     border-radius: 50%;
@@ -163,9 +163,9 @@ button{
     background-image: url(../img/arriba.png);
     background-size: cover;
     position: fixed;
-    z-index: 100;
-    bottom: 5px;
-    right: 5px;
+    z-index: 50;
+    bottom: 0.625em;
+    right: 0.938em;
     transition: 0.5s;
 }
 
@@ -288,6 +288,13 @@ main {
         display: flex;
         justify-content: center;
         padding: 1.875em;
+    }
+    .inicio{
+        bottom: 0.313em;
+        right: 0.313em;
+    }
+    .popup-compra{
+        width: 30%;
     }
 
 }
