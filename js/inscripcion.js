@@ -44,11 +44,11 @@ document.querySelector('#agregar_persona').addEventListener('click', function ()
 
 document.querySelector('#agregar_persona').addEventListener('click', calcularMonto);
 
-document.getElementsByName('selec_curso').forEach((item) => {
-    item.addEventListener('change', function () {
-        calcularMonto();
-    })
-});
+// document.getElementsByName('selec_curso').forEach((item) => {
+//     item.addEventListener('change', function () {
+//         calcularMonto();
+//     })
+// });
 
 function eliminarLinea(id) {
     document.querySelector('#linea_inscripcion_' + id).remove();
@@ -63,35 +63,35 @@ function borrarDatos() {
     });
 }
 
-function definirCursoSeleccionado() {
-    let curso = ''
-    document.getElementsByName('selec_curso').forEach((item) => {
-        if (item.checked) {
-            curso = item.value;
-        }
-    });
-    return curso;
-}
+// function definirCursoSeleccionado() {
+//     let curso = ''
+//     document.getElementsByName('selec_curso').forEach((item) => {
+//         if (item.checked) {
+//             curso = item.value;
+//         }
+//     });
+//     return curso;
+// }
 
 function definirSubtotal(curso) {
     let subtotal = 0;
     switch (curso) {
-        case 'html':
+        case 'HTML':
             subtotal = 50000;
             break;
-        case 'css':
+        case 'CSS':
             subtotal = 25000;
             break;
-        case 'js':
+        case 'JavaScript':
             subtotal = 90000;
             break;
-        case 'php':
+        case 'PHP':
             subtotal = 10000;
             break;
-        case 'mysql':
+        case 'MySQL':
             subtotal = 60000;
             break;
-        case 'java':
+        case 'Java':
             subtotal = 120000;
             break;
     }
@@ -99,48 +99,54 @@ function definirSubtotal(curso) {
 }
 
 function calcularMonto() {
-    let curso = definirCursoSeleccionado();
-    let subtotal = definirSubtotal(curso);
+    let subtotal = 0;
+    JSON.parse(sessionStorage.getItem('compras')).forEach((curso) => {
+        subtotal += curso.subtotal;
+    });
     let cantidadInscriptos = document.querySelectorAll('.linea_inscripcion').length;
     let total = subtotal * cantidadInscriptos;
     document.querySelector('#monto').innerHTML = '$' + total + '.-';
 }
+
 window.addEventListener('load', function () {
-    document.querySelector('#inscribirse').addEventListener('click', guardarCompra);
+    // document.querySelector('#inscribirse').addEventListener('click', () => {
+    //     sessionStorage.clear();
+    // });
+    calcularMonto();
 });
 
-function guardarCompra() {
-    let cantLineas = document.querySelectorAll('.linea_inscripcion').length;
-    let cursoSelec = definirCursoSeleccionado();
-    let listaCompras = JSON.parse(sessionStorage.getItem('compras'));
-    if (listaCompras != null) {
-        let elCursoYaExiste = false;
-        listaCompras.forEach((compra) => {
-            if (cursoSelec == compra.curso) {
-                elCursoYaExiste = true;
-                compra.cantidad += cantLineas;
-                compra.subtotal += definirSubtotal(cursoSelec) * cantLineas
-            }
-        });
-        if (!elCursoYaExiste) {
-            let compra = {
-                curso : cursoSelec,
-                cantidad : cantLineas,
-                subtotal : definirSubtotal(cursoSelec) * cantLineas
-            };
-            listaCompras.push(compra);
-        }
-    } else {
-        let compra = {
-            curso : cursoSelec,
-            cantidad : cantLineas,
-            subtotal : definirSubtotal(cursoSelec) * cantLineas
-        };
-        listaCompras = [compra];
-    }
-    sessionStorage.setItem('compras', JSON.stringify(listaCompras));
-    imprimirCompras();
-}
+// function guardarCompra() {
+//     let cantLineas = document.querySelectorAll('.linea_inscripcion').length;
+//     let cursoSelec = definirCursoSeleccionado();
+//     let listaCompras = JSON.parse(sessionStorage.getItem('compras'));
+//     if (listaCompras != null) {
+//         let elCursoYaExiste = false;
+//         listaCompras.forEach((compra) => {
+//             if (cursoSelec == compra.curso) {
+//                 elCursoYaExiste = true;
+//                 compra.cantidad += cantLineas;
+//                 compra.subtotal += definirSubtotal(cursoSelec) * cantLineas
+//             }
+//         });
+//         if (!elCursoYaExiste) {
+//             let compra = {
+//                 curso : cursoSelec,
+//                 cantidad : cantLineas,
+//                 subtotal : definirSubtotal(cursoSelec) * cantLineas
+//             };
+//             listaCompras.push(compra);
+//         }
+//     } else {
+//         let compra = {
+//             curso : cursoSelec,
+//             cantidad : cantLineas,
+//             subtotal : definirSubtotal(cursoSelec) * cantLineas
+//         };
+//         listaCompras = [compra];
+//     }
+//     sessionStorage.setItem('compras', JSON.stringify(listaCompras));
+//     imprimirCompras();
+// }
 
 function validarForm() {
     let regexNombreApellido = /^[a-zA-Z]+$/;
@@ -149,17 +155,17 @@ function validarForm() {
     let regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     let mensajeError = '';
     let error = false;
-    let selecCurso = document.getElementsByName('selec_curso');
-    let seleccion = false;
-    selecCurso.forEach((radioIn) => {
-        if (radioIn.checked) {
-            seleccion = true;
-        }
-    });
-    if (!seleccion) {
-        mensajeError += 'Debe seleccionar algún curso<br>';
-        error = true;
-    }
+    // let selecCurso = document.getElementsByName('selec_curso');
+    // let seleccion = false;
+    // selecCurso.forEach((radioIn) => {
+    //     if (radioIn.checked) {
+    //         seleccion = true;
+    //     }
+    // });
+    // if (!seleccion) {
+    //     mensajeError += 'Debe seleccionar algún curso<br>';
+    //     error = true;
+    // }
     let lineasForm = document.querySelectorAll('.linea_inscripcion');
     let nombres = [];
     let apellidos = [];
@@ -183,7 +189,7 @@ function validarForm() {
     });
     if (!nombreEstaOk) {
         error = true;
-        mensajeError += '<p>El nombre no es válido</p>';
+        mensajeError += '<p>El nombre no es válido.</p>';
     }
 
     let apellidoEstaOk = true;
@@ -195,7 +201,7 @@ function validarForm() {
     });
     if (!apellidoEstaOk) {
         error = true;
-        mensajeError += '<p>El apellido no es válido</p>';
+        mensajeError += '<p>El apellido no es válido.</p>';
     }
 
     let dniEstaOk = true;
@@ -207,7 +213,7 @@ function validarForm() {
     });
     if (!dniEstaOk) {
         error = true;
-        mensajeError += '<p>El dni no es válido</p>';
+        mensajeError += '<p>El dni no es válido (no debe tener puntos ni superar los 8 dígitos).</p>';
     }
 
     let emailEstaOk = true;
@@ -219,7 +225,7 @@ function validarForm() {
     });
     if (!emailEstaOk) {
         error = true;
-        mensajeError += '<p>El email no es válido</p>';
+        mensajeError += '<p>El email no es válido.</p>';
     }
 
     let telefonoEstaOk = true;
@@ -231,9 +237,12 @@ function validarForm() {
     });
     if (!telefonoEstaOk) {
         error = true;
-        mensajeError += '<p>El telefono no es válido</p>';
+        mensajeError += '<p>El telefono no es válido (debe cumplir el formato xxxx-xxxx).</p>';
     }
 
     document.querySelector('#mensaje-error').innerHTML = mensajeError;
+    if (!error) {
+        sessionStorage.clear();
+    }
     return !error;
 }
