@@ -102,8 +102,49 @@
     color: #fff;
 }
 
+.pop-ins{
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #78362C;
+    color: #fff;
+    width: 50%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 3px 6px 27px 1px rgb(166, 166, 166);
+    -moz-box-shadow: 3px 6px 27px 1px rgb(166, 166, 166);
+    box-shadow: 3px 6px 27px 1px rgba(166,166,166,0.78);
+    border-radius: 5px;
+}
+.btn-aceptar{
+    background-color: #264678;
+    color: #fff;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 5px;
+}
+.btn-aceptar:focus{
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+.btn-aceptar:hover{
+    box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #1c3358 0 -3px 0 inset;
+    background-color: #ffffff;
+    color: #000000;
+}
+.btn-aceptar:active{
+    box-shadow: #D6D6E7 0 3px 7px inset;
+}
 @media screen and (min-width: 47em) {
     .linea_inscripcion {
         flex-wrap: nowrap;
+    }
+    .pop-ins{
+        width: 25%;
+        height: 20%;
     }
 }

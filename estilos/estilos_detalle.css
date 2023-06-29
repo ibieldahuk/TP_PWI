@@ -33,20 +33,25 @@
     margin: 0.5em 0.25em;
 }
 
-.foto_curso {
+.foto_curso img{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
 }
 
 .datos_curso * {
-    margin: 0.5em 0;
+    margin: 0.5em 20px 0.5em 0;
 }
 
 .datos_curso p {
     text-align: justify;
 }
-
+.contenedor-curso{
+    margin: 3.125em 0;
+}
 .contenidos_curso {
     display: flex;
     flex-direction: column;
@@ -164,9 +169,11 @@
     .datos_curso {
         width: 50%;
     }
-
+    .contenedor-curso{
+        margin: 6.25em 0 3.125em 0.625em;
+    }
     .contenidos_curso {
-        width: 40%;
+        width: 70%;
     }
 
     .info {

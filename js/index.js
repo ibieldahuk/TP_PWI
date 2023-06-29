@@ -107,7 +107,7 @@ $(document).ready(function(){
         dots: false,
         infinite: true,
         speed: 300,
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 1,
         arrows: false,
         autoplay: true,
@@ -116,7 +116,7 @@ $(document).ready(function(){
             {
             breakpoint: 1024,
             settings: {
-                slidesToShow: 2,
+                slidesToShow: 4,
                 slidesToScroll: 1,
                 infinite: true,
                 dots: false
@@ -125,14 +125,14 @@ $(document).ready(function(){
             {
             breakpoint: 600,
             settings: {
-                slidesToShow: 1,
+                slidesToShow: 3,
                 slidesToScroll: 1
             }
             },
             {
             breakpoint: 480,
             settings: {
-                slidesToShow: 1,
+                slidesToShow: 2,
                 slidesToScroll: 1
             }
             }

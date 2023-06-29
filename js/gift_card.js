@@ -27,9 +27,9 @@ color.forEach((item)=>{
 
 tamanio.forEach((item)=>{
     item.addEventListener("click", ()=>{
-        vistaPrevia.classList.remove("veinte", "veintiocho", "treintidos", "cuarentiocho", "sesenta");
+        texto.classList.remove("veinte", "veintiocho", "treintidos", "cuarentiocho", "sesenta");
         if(item.checked){
-            vistaPrevia.classList.add(`${item.value}`);
+            texto.classList.add(`${item.value}`);
         }
     });
 });
