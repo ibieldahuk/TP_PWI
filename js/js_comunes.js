@@ -11,9 +11,9 @@ btnCerrar.addEventListener("click", ()=>{
     popup.classList.add("d-none");
 });
 
-btnCompra.addEventListener('click', () => {
-    sessionStorage.clear();
-});
+// btnCompra.addEventListener('click', () => {
+//     sessionStorage.clear();
+// });
 
 window.onload = function () {
     imprimirCompras();
@@ -31,13 +31,10 @@ function imprimirCompras() {
         listaCompras.forEach((curso) => {
             let contenedor = document.createElement('div');
             let nombreCurso = document.createElement('p');
-            let cantidad = document.createElement('p');
             let subtotal = document.createElement('p');
             nombreCurso.appendChild(document.createTextNode(curso.curso));
-            cantidad.appendChild(document.createTextNode('x' + curso.cantidad));
             subtotal.appendChild(document.createTextNode('$' + curso.subtotal + '.-'));
             contenedor.appendChild(nombreCurso);
-            contenedor.appendChild(cantidad);
             contenedor.appendChild(subtotal);
             contenedorCompras.appendChild(contenedor);
             totalCalculado += curso.subtotal;
