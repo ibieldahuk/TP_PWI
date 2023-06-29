@@ -32,7 +32,10 @@
 .detalle > article {
     margin: 0.5em 0.25em;
 }
-
+.foto_curso{
+    display: flex;
+    justify-content: center;
+}
 .foto_curso img{
     display: flex;
     justify-content: center;
@@ -221,13 +224,15 @@
     position: absolute;
     font-size: 11px;
     bottom: 0;
-    right: 32%;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .compra{
     position: absolute;
-    top: 70%;
-    right: 30%;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, 0);
     background-color: #264678;
     padding: 10px 5px;
     color: #fff;
