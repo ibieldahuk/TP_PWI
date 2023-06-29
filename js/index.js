@@ -52,14 +52,11 @@ function guardarCompra(cursoSelec) {
 }
 
 window.onload = function () {
-    // console.log('ok');
     let btnsCompra = document.querySelectorAll('.compra');
     btnsCompra.forEach((btn) => {
         btn.addEventListener('click', function () {
-            // console.log(this.parentElement.querySelector('.nombre').innerHTML);
             let curso = this.parentElement.querySelector('.nombre').innerHTML;
             guardarCompra(curso);
-            console.log(sessionStorage.getItem('compras'));
         });
     });
 };
