@@ -227,10 +227,13 @@
 .en_boton{
     border-radius: 5px;
     border-style: none;
-    padding: 8px;
+    padding: 0.625em 0.5em;
     cursor: pointer;
     background-color: #264678;
     color: #fff;
+    width: 35%;
+    display: flex;
+    justify-content: center;
 }
 .en-boton:focus{
     box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
@@ -268,6 +271,7 @@
 }
 .boton-enviar{
     margin-left: 1.875em;
+    padding: 8px;
 }
 .popup input{
     border-style: solid;
@@ -275,6 +279,7 @@
     border-radius: 0.313em;
     margin-left: 0.313em;
     box-sizing: border-box;
+    width: 40%;
 }
 .popup label{
     align-self: center;
@@ -330,5 +335,9 @@
     }
     .error p{
         margin-top: 0.625em;
+    }
+    .boton-enviar{
+        max-width: 15%;
+        padding: 0.625em;
     }
 }
