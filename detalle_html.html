@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iCourses</title>
+    <link rel="stylesheet" href="estilos/estilos_comunes.css">
+    <link rel="stylesheet" href="estilos/estilos_detalle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="js/detalle.js"></script>
+</head>
+
+<body>
+    
+    <!--
+        *   *   *****   *****   ****    *****   *****
+        *   *   *       *   *   *   *   *       *   *
+        *****   ***     *****   *   *   ***     *****
+        *   *   *       *   *   *   *   *       * **
+        *   *   *****   *   *   ****    *****   *   *
+    -->
+    
+    <header id="inicio">
+        <section class="menu_superior">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Isotipo de la empresa." class="logo">
+            </a>
+            <form action="#" method="get">
+                <input type="text" name="busqueda" id="busqueda" placeholder="Buscar">
+            </form>
+            <img src="img/lupa.png" alt="" class="img_busqueda">
+            <button type="button" class="carrito">
+                <span class="numero-carrito d-none"></span>
+            </button>
+        </section>
+        <section class="cont-pop">
+            <article class="popup-compra d-none">
+                <button type="button" class="boton-cierre">x</button>
+                <h2>Tu Carrito de compra:</h2>
+                <div class="items" id="items-carrito"></div>
+                <p class="total">Total:</p> <p class="monto-total">$000.-</p>
+                <a href="inscripcion.html" class="bn-comprar">Comprar</a>
+            </article>
+        </section>
+        <nav class="menu_inferior">
+            <a href="index.html">Página Principal</a>
+            <a href="calendario.html">Calendario</a>
+            <a href="inscripcion.html">Inscripcion</a>
+            <a href="gift_card.html">Creá una Giftcard</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="detalle">
+            <article class="foto_curso">
+                <img src="img/html-logo.png" alt="">
+            </article>
+            <article class="datos_curso">
+                <h2>Curso de HTML</h2>
+                <p><strong>Valor:</strong> $80.000,0</p>
+                <p><strong>Tiempo de dedicación necesario:</strong> 60hs</p>
+                <p><strong>Descripción de curso:</strong> En este curso vas a aprender a desarrollar aplicaciones Web con PHP.</p>
+                <p><strong>Requisitos previos:</strong> No necesita conocimientos previos.</p>
+                <a class="inscripcion" href="inscripcion.html">Inscribite</a>
+            </article>
+        </section>
+        <section class="contenedor-curso">
+            <article class="contenidos_curso">
+                <h2>Contenidos por Clase</h2>
+                <ul>
+                    <li>
+                        <p>Introducción</p>
+                        <span class="material-icons" onclick="mostrarOcultar('contenidos_1', 'btn_contenidos_1')" id="btn_contenidos_1">expand_more</span>
+                    </li>
+                    <!--li-->
+                        <ul id="contenidos_1">
+                            <li>
+                                <span class="material-icons">play_circle_outline</span>
+                                <p>Variables</p>
+                                <div>
+                                    <span class="material-icons">access_time</span>
+                                    <p>10min</p>
+                                    <span class="material-icons">check_circle</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="material-icons">play_circle_outline</span>
+                                <p>Operadores</p>
+                                <div>
+                                    <span class="material-icons">access_time</span>
+                                    <p>10min</p>
+                                    <span class="material-icons">radio_button_unchecked</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="material-icons">mode_edit</span>
+                                <p>Ejercicios</p>
+                                <div>
+                                    <span class="material-icons">access_time</span>
+                                    <p>10min</p>
+                                    <span class="material-icons">radio_button_unchecked</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="material-icons">check_box</span>
+                                <p>Evaluación</p>
+                                <div>
+                                    <span class="material-icons">access_time</span>
+                                    <p>60min</p>
+                                    <span class="material-icons">radio_button_unchecked</span>
+                                </div>
+                            </li>
+                        </ul>
+                    <!--/li-->
+                    <li>
+                        <p>Unidad 2</p>
+                        <span class="material-icons" onclick="mostrarOcultar('contenidos_2', 'btn_contenidos_2')" id="btn_contenidos_2">expand_more</span>
+                    </li>
+                    <!--li-->
+                    <ul id="contenidos_2">
+                        <li>
+                            <span class="material-icons">play_circle_outline</span>
+                            <p>Variables</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">check_circle</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">play_circle_outline</span>
+                            <p>Operadores</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">mode_edit</span>
+                            <p>Ejercicios</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">check_box</span>
+                            <p>Evaluación</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>60min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                    </ul>
+                <!--/li-->
+                    <li>
+                        <p>Unidad 3</p>
+                        <span class="material-icons" onclick="mostrarOcultar('contenidos_3', 'btn_contenidos_3')" id="btn_contenidos_3">expand_more</span>
+                    </li>
+                    <!--li-->
+                    <ul id="contenidos_3">
+                        <li>
+                            <span class="material-icons">play_circle_outline</span>
+                            <p>Variables</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">check_circle</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">play_circle_outline</span>
+                            <p>Operadores</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">mode_edit</span>
+                            <p>Ejercicios</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">check_box</span>
+                            <p>Evaluación</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>60min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                    </ul>
+                <!--/li-->
+                    <li>
+                        <p>Unidad 4</p>
+                        <span class="material-icons" onclick="mostrarOcultar('contenidos_4', 'btn_contenidos_4')" id="btn_contenidos_4">expand_more</span>
+                    </li>
+                    <!--li-->
+                    <ul id="contenidos_4">
+                        <li>
+                            <span class="material-icons">play_circle_outline</span>
+                            <p>Variables</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">check_circle</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">play_circle_outline</span>
+                            <p>Operadores</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">mode_edit</span>
+                            <p>Ejercicios</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">check_box</span>
+                            <p>Evaluación</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>60min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                    </ul>
+                <!--/li-->
+                    <li>
+                        <p>Unidad 5</p>
+                        <span class="material-icons" onclick="mostrarOcultar('contenidos_5', 'btn_contenidos_5')" id="btn_contenidos_5">expand_more</span>
+                    </li>
+                    <!--li-->
+                    <ul id="contenidos_5">
+                        <li>
+                            <span class="material-icons">play_circle_outline</span>
+                            <p>Variables</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">check_circle</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">play_circle_outline</span>
+                            <p>Operadores</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">mode_edit</span>
+                            <p>Ejercicios</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>10min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons">check_box</span>
+                            <p>Evaluación</p>
+                            <div>
+                                <span class="material-icons">access_time</span>
+                                <p>60min</p>
+                                <span class="material-icons">radio_button_unchecked</span>
+                            </div>
+                        </li>
+                    </ul>
+                <!--/li-->
+                </ul>
+            </article>
+        </section>
+        <section class="info_docente">
+            <article>
+                <h2>Docente</h2>
+            </article>
+            <article class="info">
+                <img src="img/foto_docente.jpg" alt="">
+                <div>
+                    <h2>Pedro Horacio Petrovich</h2>
+                    <div class="full_star">
+                        <span class="material-icons">&#xe885;</span>
+                        <span class="material-icons">&#xe885;</span>
+                        <span class="material-icons">&#xe885;</span>
+                        <span class="material-icons">&#xe885;</span>
+                        <span class="material-icons">&#xe885;</span>
+                    </div>
+                    <div class="empty_star"><span class="material-icons">&#xe885;</span></div>
+                    <p>P. H. Petrovich enseña en nuestra plataforma desde hace más de 10 años. Su trayectoria incluye lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cumque magni tempora, reprehenderit modi quaerat maiores unde ipsam sed aspernatur qui tenetur nam? Voluptas, illum. Laboriosam expedita ipsum nesciunt autem?</p>
+                </div>
+            </article>
+        </section>
+        <section class="otros_cursos">
+            <article class="curso curso-1">
+                <span class="precio">$80.000,0</span>
+                <div>
+                    <h4 class="tiempo">60hs</h4>
+                    <h4 class="nombre">HTML</h4>
+                </div>
+                <a href="inscripcion.html" class="compra">Comprar</a>
+                <a href="detalle_html.html" class="detalles">Ver detalle</a>
+            </article>
+            <article class="curso curso-2">
+                <span class="precio">$70.000,0</span>
+                <div>
+                    <h4 class="tiempo">60hs</h4>
+                    <h4 class="nombre">CSS</h4>
+                </div>
+                <a href="detalle_css.html" class="detalles">Ver detalle</a>
+                <a href="inscripcion.html" class="compra">Comprar</a>
+            </article>
+            <article class="curso curso-3">
+                <span class="precio">$100.000,0</span>
+                <div>
+                    <h4 class="tiempo">60hs</h4>
+                    <h4 class="nombre">JavaScript</h4>
+                </div>
+                <a href="detalle_js.html" class="detalles">Ver detalle</a>
+                <a href="inscripcion.html" class="compra">Comprar</a>
+            </article>
+        </section>
+        <a href="#inicio" class="inicio"></a>
+    </main>
+
+    <!--
+            *****   *****   *****   *****   *****   *****
+            *       *   *   *   *     *     *       *   *
+            ***     *   *   *   *     *     ***     *****
+            *       *   *   *   *     *     *       * **
+            *       *****   *****     *     *****   *   *
+    -->
+
+    <footer class="footer">
+        <article class="integrantes">
+            <p>Fernandez Guadalupe - 44.141.095</p>
+            <p>Ibi Eldahuk - 42.153.581</p>
+            <p>Duran Juliana - 40.290.932</p>
+        </article>
+        <nav class="navegacion">
+            <a href="index.html">Página Principal</a>
+            <a href="calendario.html">Calendario</a>
+            <a href="inscripcion.html">Inscripcion</a>
+            <a href="gift_card.html">Creá una Giftcard</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+        <article class="redes">
+            <a href="https://www.facebook.com/" target="_blank" class="fb">
+                <img src="img/facebook.png" alt="">
+            </a>
+            <a href="https://www.github.com/" target="_blank" class="git">
+                <img src="img/github.png" alt="">
+            </a>
+            <a href="https://www.twitter.com/" target="_blank" class="tw">
+                <img src="img/twitter.png" alt="">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" class="ig">
+                <img src="img/instagram.png" alt="">
+            </a>
+        </article>
+    </footer>
+    <script src="js/js_comunes.js"></script>
+</body>
+</html>
