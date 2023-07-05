@@ -10,7 +10,7 @@ const posicion = document.getElementsByName("pos");
 const enviar = document.querySelector(".boton-enviar");
 const cerrar = document.querySelector(".boton-cancelar");
 const confirmar = document.querySelector("#boton-confirmar");
-const popup = document.querySelector(".popup");
+const popupGift = document.querySelector(".popup");
 const preguntaPop = document.querySelector(".pregunta-popup");
 const formPop = document.querySelector(".formulario-popup");
 const enviado = document.querySelector(".enviado");
@@ -63,13 +63,13 @@ posicion.forEach((item) => {
 //boton confirmacion de gc
 confirmar.addEventListener("click", (e)=>{
     e.preventDefault();
-    popup.classList.remove("d-none");
+    popupGift.classList.remove("d-none");
 });
 
 // //botones para cerrar y enviar el popup
 cerrar.addEventListener("click", (e)=>{
     e.preventDefault();
-    popup.classList.add("d-none");
+    popupGift.classList.add("d-none");
 });
 
 enviar.addEventListener("click", (e)=>{
