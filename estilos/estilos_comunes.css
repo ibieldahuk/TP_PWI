@@ -85,7 +85,7 @@ button{
     bottom: 25%;
     right: 10%;
 }
-.bn-comprar{
+.bn-comprar, .boton-reinicio-compras{
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -98,7 +98,13 @@ button{
     left: 50%;
     transform: translate(-50%, 0);
 }
-.bn-comprar, .compra, #inscribirse, .en_boton, .boton, .btn-aceptar, .inscripcion{
+.boton-reinicio-compras{
+    bottom: 1%;
+    height: 24px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.bn-comprar, .compra, #inscribirse, .en_boton, .boton, .btn-aceptar, .inscripcion, .boton-reinicio-compras{
     appearance: none;
     background-color: #FCFCFD;
     border-radius: 4px;
@@ -118,17 +124,17 @@ button{
     white-space: nowrap;
     will-change: box-shadow,transform;
 }
-.bn-comprar:focus{
+.bn-comprar:focus, .boton-reinicio-compras:focus{
     box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
 }
    
-.bn-comprar:hover{
+.bn-comprar:hover, .boton-reinicio-compras:hover{
     box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #1c3358 0 -3px 0 inset;
     background-color: #264678;
     color: #fff;
 }
    
-.bn-comprar:active{
+.bn-comprar:active, .boton-reinicio-compras:active{
     box-shadow: #D6D6E7 0 3px 7px inset;
 }
 

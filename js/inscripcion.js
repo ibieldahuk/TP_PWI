@@ -187,7 +187,6 @@ function validarForm() {
     if(error){
         document.querySelector('#mensaje-error').innerHTML = mensajeError;
     } else {
-        console.log('ok')
         sessionStorage.clear();
         document.querySelector('.pop-ins').classList.toggle('d-none');
     }
